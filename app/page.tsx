@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import Footer from "@/components/ui/footer"
+import Header from "@/components/ui/header"
 import { ArrowRight, Globe, Code2, Shield, Zap, Sparkles, Lightbulb, Palette, GitBranch, Package } from "lucide-react"
 import Image from "next/image"
 import Link from 'next/link'
@@ -28,12 +30,12 @@ export default function Home() {
             <a href="#expertise" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Expertise
             </a>
-            <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               About
-            </a>
-             <a href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            </Link>
+             <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Contact
-            </a>
+            </Link>
           </nav>
         </div>
       </header>
@@ -327,74 +329,7 @@ export default function Home() {
 
 
       {/* Footer */}
-      <footer className="border-t border-border bg-card">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="space-y-4">
-              <Image
-                  src="/allignet-logo-2.png"
-                alt="Aillegent"
-                width={220}
-                height={66}
-                className="h-16 w-auto"
-                quality={100}
-              />
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Transforming visions into reality with enterprise-grade solutions.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold">Services</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <a href="#service-strategy" className="hover:text-foreground transition-colors">
-                    Product Strategy & Architecture
-                  </a>
-                </li>
-                <li>
-                  <a href="#service-development" className="hover:text-foreground transition-colors">
-                    Custom Software Development
-                  </a>
-                </li>
-                <li>
-                  <a href="#service-ai" className="hover:text-foreground transition-colors">
-                    AI-Powered Engineering
-                  </a>
-                </li>
-                <li>
-                  <a href="#service-design" className="hover:text-foreground transition-colors">
-                    UX/UI Design & Engineering
-                  </a>
-                </li>
-                <li>
-                  <a href="#service-devops" className="hover:text-foreground transition-colors">
-                    DevOps & Cloud Delivery
-                  </a>
-                </li>
-                <li>
-                  <a href="#service-enablement" className="hover:text-foreground transition-colors">
-                    Developer Enablement
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold">Company</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <Link href="/contact"> Contact Us</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-border mt-12 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} Aillegent. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+     <Footer></Footer>
     </div>
   )
 }

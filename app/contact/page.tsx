@@ -1,10 +1,12 @@
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Mail, MapPin, Phone } from "lucide-react"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import Footer from "@/components/ui/footer";
+import Link from "next/link";
 
 export default function ContactPage() {
   return (
@@ -13,29 +15,41 @@ export default function ContactPage() {
       <header className="sticky top-0 z-50 bg-background border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <a href="/">
- <Image
-            src="/allignet-logo-2.png"
-            alt="Aillegent"
-            width={220}
-            height={66}
-            className="h-16 w-auto"
-            quality={100} 
-            priority
-          />
+            <Image
+              src="/allignet-logo-2.png"
+              alt="Aillegent"
+              width={220}
+              height={66}
+              className="h-16 w-auto"
+              quality={100}
+              priority
+            />
           </a>
           <nav className="hidden md:flex items-center gap-8">
-            <a href="/#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a
+              href="/#services"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               Services
             </a>
-            <a href="/#expertise" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a
+              href="/#expertise"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               Expertise Test
             </a>
-            <a href="/#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              href="/about"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               About
-            </a>
-            <Button size="sm" asChild>
-              <a href="/contact">Contact </a>
-            </Button>
+            </Link>
+            <Link
+              href="/contact"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Contact
+            </Link>
           </nav>
         </div>
       </header>
@@ -43,10 +57,13 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-24 md:py-32">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-balance">Let’s build the future, together.</h1>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-balance">
+            Let’s build the future, together.
+          </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
-           Ready to turn your vision into reality? Let's talk about how we can help you build powerful software solutions for your business.
-          </p> 
+            Ready to turn your vision into reality? Let's talk about how we can
+            help you build powerful software solutions for your business.
+          </p>
         </div>
       </section>
 
@@ -64,7 +81,12 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email *</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" required />
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="your@email.com"
+                      required
+                    />
                   </div>
                 </div>
 
@@ -77,7 +99,7 @@ export default function ContactPage() {
                   <Label htmlFor="message">Message *</Label>
                   <Textarea
                     id="message"
-                    placeholder="Tell us about your project and how we can help..."
+                    placeholder="Message..."
                     className="min-h-32"
                     required
                   />
@@ -99,7 +121,9 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-1">
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-sm text-muted-foreground">info@aillegent.com</p>
+                  <p className="text-sm text-muted-foreground">
+                    info@aillegent.com
+                  </p>
                 </div>
               </div>
             </Card>
@@ -111,7 +135,9 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-1">
                   <h3 className="font-semibold">Phone</h3>
-                  <p className="text-sm text-muted-foreground">+(91)- 9028321652</p>
+                  <p className="text-sm text-muted-foreground">
+                    +(91)- 9028321652
+                  </p>
                 </div>
               </div>
             </Card>
@@ -123,7 +149,9 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-1">
                   <h3 className="font-semibold">Location</h3>
-                  <p className="text-sm text-muted-foreground">Remote-first team serving clients globally</p>
+                  <p className="text-sm text-muted-foreground">
+                    Remote-first team serving clients globally
+                  </p>
                 </div>
               </div>
             </Card>
@@ -132,77 +160,7 @@ export default function ContactPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-card">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="space-y-4">
-               <Image
-                          src="/allignet-logo-2.png"
-                          alt="Aillegent"
-                          width={220}
-                          height={66}
-                          className="h-16 w-auto"
-                          quality={100} 
-                          priority
-                        />
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Transforming visions into reality with enterprise-grade solutions.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold">Services</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <a href="/#service-strategy" className="hover:text-foreground transition-colors">
-                    Product Strategy & Architecture
-                  </a>
-                </li>
-                <li>
-                  <a href="/#service-development" className="hover:text-foreground transition-colors">
-                    Custom Software Development
-                  </a>
-                </li>
-                <li>
-                  <a href="/#service-ai" className="hover:text-foreground transition-colors">
-                    AI-Powered Engineering
-                  </a>
-                </li>
-                <li>
-                  <a href="/#service-design" className="hover:text-foreground transition-colors">
-                    UX/UI Design & Engineering
-                  </a>
-                </li>
-                <li>
-                  <a href="/#service-devops" className="hover:text-foreground transition-colors">
-                    DevOps & Cloud Delivery
-                  </a>
-                </li>
-                <li>
-                  <a href="/#service-enablement" className="hover:text-foreground transition-colors">
-                    Developer Enablement
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold">Company</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <a href="/contact" className="hover:text-foreground transition-colors">
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-border mt-12 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} Aillegent. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer></Footer>
     </div>
-  )
+  );
 }
