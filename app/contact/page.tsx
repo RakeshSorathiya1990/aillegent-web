@@ -7,52 +7,13 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Footer from "@/components/ui/footer";
 import Link from "next/link";
+import Header from "@/components/ui/header";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div>
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-background border-b border-border">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <a href="/">
-            <Image
-              src="/allignet-logo-2.png"
-              alt="Aillegent"
-              width={220}
-              height={66}
-              className="h-16 w-auto"
-              quality={100}
-              priority
-            />
-          </a>
-          <nav className="hidden md:flex items-center gap-8">
-            <a
-              href="/#services"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Services
-            </a>
-            <a
-              href="/#expertise"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Expertise Test
-            </a>
-            <Link
-              href="/about"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              href="/contact"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Contact
-            </Link>
-          </nav>
-        </div>
-      </header>
+    <Header></Header>
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-24 md:py-32">
