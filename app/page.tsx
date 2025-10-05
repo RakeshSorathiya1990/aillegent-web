@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ArrowRight, Globe, Code2, Shield, Zap, Sparkles, Lightbulb, Palette, GitBranch, Package } from "lucide-react"
 import Image from "next/image"
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -29,6 +30,9 @@ export default function Home() {
             </a>
             <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               About
+            </a>
+             <a href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Contact
             </a>
           </nav>
         </div>
@@ -65,7 +69,7 @@ export default function Home() {
 
             <div className="flex items-center justify-center pt-2">
               <Button size="lg" className="text-base px-8">
-                Schedule a Consultation
+                  <Link href="/contact"> Schedule a Consultation</Link>
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -228,7 +232,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-24">
           <div className="max-w-6xl mx-auto space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-5xl font-bold text-balance">Domain Expertise</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-balance">Industry Expertise</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
                 Extensive technical expertise spanning various industries
               </p>
@@ -236,14 +240,13 @@ export default function Home() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                "Health & Insurance",
-                "Ad Platforms",
-                "Finance",
-                "Intellectual Property",
-                "Travel",
-                "E-commerce",
-                "Education",
-                "Real Estate",
+                  "Ad Platforms",
+                  "E-commerce",
+                   "Finance",
+                   "Health & Insurance",
+                   "Intellectual Property",
+                   "Travel",
+             
               ].map((domain) => (
                 <Card key={domain} className="p-6 text-center hover:border-primary transition-colors">
                   <div className="font-medium">{domain}</div>
@@ -254,6 +257,7 @@ export default function Home() {
         </div>
       </section>
 
+     
       {/* Why Choose Us Section */}
       <section className="container mx-auto px-4 py-24">
         <div className="max-w-6xl mx-auto space-y-12">
@@ -312,13 +316,15 @@ export default function Home() {
             </p>
             <div className="flex items-center justify-center pt-4">
               <Button size="lg" variant="secondary" className="text-base px-8">
-                Schedule a Consultation
+                 <Link href="/contact"> Schedule a Consultation</Link>
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
         </div>
       </section>
+
+
 
       {/* Footer */}
       <footer className="border-t border-border bg-card">
@@ -378,9 +384,7 @@ export default function Home() {
               <h4 className="font-semibold">Company</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
-                    Contact Us
-                  </a>
+                  <Link href="/contact"> Contact Us</Link>
                 </li>
               </ul>
             </div>
