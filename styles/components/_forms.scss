@@ -1,0 +1,137 @@
+// ============================================================
+//  Forms + contact — form card, fields, messages, contact side
+// ============================================================
+@use '../abstracts/breakpoints' as *;
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.4fr .8fr;
+  gap: clamp(28px, 4vw, 48px);
+  align-items: start;
+}
+
+.form-card {
+  background: #FFFFFF;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  padding: clamp(24px, 3vw, 38px);
+  box-shadow: 0 24px 56px -36px #0C13202E;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+
+  label {
+    font-size: .9rem;
+    font-weight: 600;
+  }
+
+  .req {
+    color: var(--brand);
+  }
+
+  // Native <select> is styled here alongside input/textarea (matches
+  // the source). The custom dropdown component lives in _select.scss.
+  input,
+  select,
+  textarea {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--line-2);
+    border-radius: 11px;
+    padding: 13px 15px;
+    width: 100%;
+    transition: border-color .2s, box-shadow .2s;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px #25D79B29;
+  }
+
+  textarea {
+    min-height: 130px;
+    resize: vertical;
+  }
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-msg {
+  margin-top: 8px;
+  padding: 16px 18px;
+  border-radius: 11px;
+  background: linear-gradient(140deg, #25D79B1F, #3B7DE014);
+  color: var(--brand);
+  font-weight: 600;
+  font-size: .95rem;
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+
+.contact-side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 22px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px #0C13200A, 0 14px 30px -26px #0C132024;
+
+  .ci {
+    width: 44px;
+    height: 44px;
+    flex: none;
+    border-radius: 12px;
+    background: linear-gradient(140deg, #25D79B29, #3B7DE01F);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand);
+  }
+
+  h4 {
+    font-family: var(--font-body);
+    font-size: .95rem;
+    font-weight: 700;
+  }
+
+  p {
+    color: var(--muted);
+    font-size: .92rem;
+  }
+}
+
+@include mq(1000px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@include mq(sm) {
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,126 @@
+// ============================================================
+//  Custom dropdown (replaces native <select>) + form validation
+// ============================================================
+
+.select {
+  position: relative;
+  width: 100%;
+}
+
+.select-btn {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line-2);
+  border-radius: 11px;
+  padding: 13px 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color .2s, box-shadow .2s;
+
+  &.is-placeholder > span {
+    color: var(--faint);
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px #25D79B29;
+  }
+}
+
+.select-caret {
+  flex: none;
+  color: var(--muted);
+  transition: transform .22s var(--ease);
+}
+
+.select.open {
+  .select-btn {
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px #25D79B29;
+  }
+  .select-caret {
+    transform: rotate(180deg);
+  }
+}
+
+.select-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 40;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  max-height: 264px;
+  overflow-y: auto;
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  box-shadow: 0 22px 50px -28px #0C132040, 0 2px 8px #0C13201A;
+  animation: select-in .16s var(--ease-out);
+}
+
+@keyframes select-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.select-opt {
+  padding: 11px 13px;
+  border-radius: 9px;
+  font-size: .96rem;
+  color: var(--ink-dim);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background .12s, color .12s;
+
+  &.active {
+    background: #25D79B14;
+    color: var(--ink);
+  }
+
+  &.selected {
+    color: var(--brand);
+    font-weight: 600;
+
+    &::after {
+      content: "✓";
+      font-size: .9rem;
+    }
+  }
+}
+
+// ---- validation ----
+.field-err {
+  color: #D6453D;
+  font-size: .82rem;
+  font-weight: 500;
+}
+
+.field input[aria-invalid="true"],
+.field textarea[aria-invalid="true"] {
+  border-color: #D6453D;
+
+  &:focus {
+    box-shadow: 0 0 0 3px #D6453D26;
+  }
+}
+
+// ---- message states (extends .form-msg) ----
+.form-msg {
+  &.error {
+    background: #D6453D14;
+    color: #B33A32;
+  }
+}

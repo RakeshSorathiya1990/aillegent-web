@@ -1,0 +1,9 @@
+// ============================================================
+//  Breadcrumb — hidden in this design.
+//  (`.sep` is used in markup but carries no rule in the source,
+//   and `.breadcrumb` is display:none, so nothing renders.)
+// ============================================================
+
+.breadcrumb {
+  display: none;
+}

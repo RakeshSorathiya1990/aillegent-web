@@ -1,0 +1,58 @@
+// ============================================================
+//  Reusable mixins extracted from the source patterns.
+// ============================================================
+
+// Centered content column (matches .wrap / .pin-grid width).
+@mixin wrap {
+  width: min(var(--wrap), 92vw);
+  margin-inline: auto;
+}
+
+// Lift-on-hover shadow used by card-like surfaces.
+@mixin card-hover {
+  transform: translateY(-6px);
+  border-color: transparent;
+  box-shadow: 0 34px 64px -34px #0C13204D;
+}
+
+// Base resting state for card-like surfaces (light).
+@mixin card-surface {
+  background: #FFFFFF;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 2px #0C13200A, 0 18px 36px -28px #0C13202E;
+}
+
+// Reveal-before-animate base state (GSAP flips .shown).
+@mixin reveal-base {
+  opacity: 0;
+  transform: translateY(34px);
+}
+
+// Aurora bloom blob.
+@mixin aurora-bloom {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  will-change: transform;
+}
+
+// Gradient text fill.
+@mixin grad-text {
+  background: var(--grad-warm);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+// Screen-reader only.
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

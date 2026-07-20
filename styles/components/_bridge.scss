@@ -1,0 +1,73 @@
+// ============================================================
+//  Bridge — "next step" slim ending band for detail pages
+// ============================================================
+@use '../abstracts/breakpoints' as *;
+
+.bridge {
+  border-top: 1px solid var(--line);
+  padding: clamp(60px, 8vw, 104px) 0;
+
+  .b-kick {
+    display: block;
+    font-size: .92rem;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .b-link {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -.02em;
+    font-size: clamp(1.7rem, 3.6vw, 2.6rem);
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--ink);
+    transition: color .3s var(--ease);
+
+    .arw {
+      color: var(--brand);
+      transition: transform .34s var(--spring);
+      font-size: .9em;
+    }
+
+    &:hover {
+      color: var(--brand);
+    }
+
+    &:hover .arw {
+      transform: translateX(8px);
+    }
+  }
+
+  .b-cta {
+    color: var(--muted);
+    font-size: .98rem;
+
+    a {
+      color: var(--brand);
+      font-weight: 600;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color .25s;
+
+      &:hover {
+        border-color: var(--brand);
+      }
+    }
+  }
+}
+
+.bridge-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+@include mq(sm) {
+  .bridge-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

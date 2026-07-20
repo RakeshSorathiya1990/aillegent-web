@@ -1,0 +1,135 @@
+// ============================================================
+//  Home hero — aurora gradient field + masked engineering grid
+// ============================================================
+@use '../abstracts/breakpoints' as *;
+@use '../abstracts/mixins' as *;
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 110px 0 70px;
+  background: var(--bg);
+
+  h1 {
+    font-size: clamp(2.8rem, 6.6vw, 5.9rem);
+    line-height: 1.03;
+    letter-spacing: -.032em;
+    font-weight: 700;
+
+    .v {
+      background: var(--grad-warm);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      // give descenders (e.g. the "y" in Deploy) paint room without shifting line spacing
+      display: inline-block;
+      padding-bottom: .12em;
+      margin-bottom: -.12em;
+    }
+  }
+
+  .sub {
+    margin-top: 28px;
+    max-width: 46ch;
+    font-size: clamp(1.12rem, 1.55vw, 1.36rem);
+    line-height: 1.6;
+    color: #3A4452;
+  }
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 60rem;
+}
+
+.hero-actions {
+  margin-top: 38px;
+
+  .btn-text {
+    font-size: 1rem;
+  }
+}
+
+// ---------- aurora blooms ----------
+.aurora {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+
+  i {
+    @include aurora-bloom;
+  }
+
+  .a1 {
+    width: 58vw;
+    height: 58vw;
+    right: -14vw;
+    top: -20vw;
+    background: radial-gradient(circle, #25D79B4D, transparent 62%);
+    animation: aur-a 26s ease-in-out infinite alternate;
+  }
+
+  .a2 {
+    width: 46vw;
+    height: 46vw;
+    right: 2vw;
+    bottom: -20vw;
+    background: radial-gradient(circle, #3B7DE038, transparent 62%);
+    animation: aur-b 32s ease-in-out infinite alternate;
+  }
+
+  .a3 {
+    width: 34vw;
+    height: 34vw;
+    left: -12vw;
+    bottom: -10vw;
+    background: radial-gradient(circle, #0E9E7624, transparent 62%);
+    animation: aur-c 29s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes aur-a {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-6vw, 5vw) scale(1.12); }
+}
+
+@keyframes aur-b {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-5vw, -6vw) scale(1.08); }
+}
+
+@keyframes aur-c {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(4vw, -4vw) scale(1.1); }
+}
+
+// faint engineering grid, fading toward the text
+.hero .hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: .5;
+  background-image:
+    linear-gradient(#0C13200D 1px, transparent 1px),
+    linear-gradient(90deg, #0C13200D 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 78% 40%, #000, transparent 74%);
+  mask-image: radial-gradient(ellipse 70% 70% at 78% 40%, #000, transparent 74%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora i {
+    animation: none !important;
+  }
+}
+
+@include mq(sm) {
+  .hero h1 {
+    font-size: clamp(2.5rem, 10vw, 3.4rem);
+  }
+}

@@ -1,0 +1,30 @@
+// ============================================================
+//  Breakpoints + mq() mixin
+//  Named set: sm 640 · md 768 · lg 900 · xl 1100 · xxl 1280.
+//  The source also uses a few one-off max-widths (1000/850/760);
+//  mq() accepts a raw length for those so every media query in
+//  app.css can be ported verbatim.
+// ============================================================
+@use 'sass:map';
+
+$breakpoints: (
+  sm:  640px,
+  md:  768px,
+  lg:  900px,
+  xl:  1100px,
+  xxl: 1280px,
+);
+
+@function _bp($bp) {
+  @if map.has-key($breakpoints, $bp) {
+    @return map.get($breakpoints, $bp);
+  }
+  @return $bp; // raw length (e.g. 1000px)
+}
+
+// Mobile-first source is written entirely with max-width queries.
+@mixin mq($bp) {
+  @media (max-width: #{_bp($bp)}) {
+    @content;
+  }
+}

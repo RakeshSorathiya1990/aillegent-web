@@ -1,0 +1,36 @@
+// ============================================================
+//  AILLEGENT — design system entry point (LIGHT theme only)
+//  7-1 pattern · Dart Sass modules (@use).
+//  Import this single file in the Next.js app.
+// ============================================================
+
+// --- Abstracts (tokens emit :root; breakpoints/mixins are silent) ---
+@use 'abstracts/tokens';
+@use 'abstracts/breakpoints';
+@use 'abstracts/mixins';
+
+// --- Base ---
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/globals';
+
+// --- Components ---
+@use 'components/buttons';
+@use 'components/header';
+@use 'components/mobile-menu';
+@use 'components/footer';
+@use 'components/cards';
+@use 'components/breadcrumb';
+@use 'components/bridge';
+@use 'components/cta';
+@use 'components/note';
+@use 'components/forms';
+@use 'components/select';
+@use 'components/marquee';
+
+// --- Sections ---
+@use 'sections/hero';
+@use 'sections/phero';
+@use 'sections/delivery-cycle';
+@use 'sections/pyramid';
+@use 'sections/misc';

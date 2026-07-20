@@ -1,0 +1,69 @@
+// ============================================================
+//  Tech / stack marquee — masked edge fades, hover-pause
+// ============================================================
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  border-block: 1px solid var(--line);
+  padding: 26px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+
+  &:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+.marquee-track {
+  display: flex;
+  gap: 56px;
+  width: max-content;
+  animation: marquee 34s linear infinite;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.mq-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-family: var(--font-mono);
+  font-size: .92rem;
+  color: var(--ink-dim);
+  white-space: nowrap;
+  opacity: .72;
+  transition: opacity .3s, color .3s;
+
+  &::before {
+    content: "◆";
+    color: var(--mint);
+    font-size: .66em;
+    opacity: .85;
+  }
+
+  &:hover {
+    opacity: 1;
+    color: var(--mint);
+  }
+}
+
+.marquee-cap {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,119 @@
+// ============================================================
+//  Globals — page ambient, layout wrappers, focus, selection,
+//  reveal base states, screenshot mode, grid helpers.
+// ============================================================
+@use '../abstracts/breakpoints' as *;
+
+// Ambient bloom behind everything (light variant).
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 80% at 50% -10%, #25D79B1A, transparent 60%),
+    radial-gradient(100% 80% at 90% 110%, #3B7DE014, transparent 55%);
+}
+
+::selection {
+  background: var(--mint);
+  color: #03130D;
+}
+
+:focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+// ---------- layout ----------
+.wrap {
+  width: min(var(--wrap), 92vw);
+  margin-inline: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  padding: clamp(52px, 6.5vw, 88px) 0;
+  position: relative;
+  z-index: 1;
+}
+
+.section-sm {
+  padding: clamp(32px, 4vw, 56px) 0;
+  position: relative;
+  z-index: 1;
+}
+
+.center {
+  text-align: center;
+}
+
+.band-soft {
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.rule {
+  height: 1px;
+  background: var(--line);
+  border: 0;
+  width: 100%;
+}
+
+.mt-btn {
+  margin-top: 40px;
+}
+
+// ---------- scroll reveal (GSAP drives; base states) ----------
+html.js [data-animate] {
+  opacity: 0;
+  transform: translateY(34px);
+}
+
+html.js [data-animate].shown {
+  opacity: 1;
+  transform: none;
+}
+
+// screenshot/preview mode: natural hero height + everything revealed
+html.shot .hero {
+  min-height: auto;
+  padding-top: 130px;
+  padding-bottom: 90px;
+}
+
+html.shot [data-animate] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-animate] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// ---------- grid column helpers ----------
+.g-2 { grid-template-columns: repeat(2, 1fr); }
+.g-3 { grid-template-columns: repeat(3, 1fr); }
+.g-4 { grid-template-columns: repeat(4, 1fr); }
+
+@include mq(lg) {
+  .g-3,
+  .g-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include mq(sm) {
+  .g-2,
+  .g-3,
+  .g-4 {
+    grid-template-columns: 1fr;
+  }
+}

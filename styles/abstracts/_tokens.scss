@@ -1,0 +1,93 @@
+// ============================================================
+//  AILLEGENT — design tokens (LIGHT, final computed values)
+//  Source of truth: demo-2/assets/app.css (html[data-theme="light"]).
+//  All colors are hex only (8-digit hex for alpha).
+// ============================================================
+
+// ---- Surfaces --------------------------------------------------
+$bg:        #F4F6F1;
+$bg-2:      #FFFFFF;
+$bg-3:      #EDF1E9;
+$panel:     #0C132008; // rgba(12,19,32,.03)
+$panel-2:   #0C13200D; // rgba(12,19,32,.05)
+$line:      #0C13201A; // rgba(12,19,32,.10)
+$line-2:    #0C132029; // rgba(12,19,32,.16)
+
+// ---- Ink -------------------------------------------------------
+$ink:       #0C1320;
+$ink-dim:   #2B333F;
+$muted:     #5B6472;
+$faint:     #8A93A2;
+
+// ---- Brand accents --------------------------------------------
+$brand:     #0E9E76;
+$mint:      #0E9E76;
+$sky:       #3B7DE0;
+$sky-soft:  #6BA0F0;
+
+// The one canonical brand gradient. Every brand-colored linear
+// gradient in the source resolves to this.
+$gradient-brand: linear-gradient(100deg, #0E9E76 20%, #3B7DE0 100%);
+
+$glow-mint: 0 0 40px #25D79B59; // rgba(37,215,155,.35)
+
+// ---- Radii -----------------------------------------------------
+$radius:    18px;
+$radius-sm: 12px;
+$radius-lg: 26px;
+
+// ---- Easing ----------------------------------------------------
+$ease:      cubic-bezier(.22, .61, .36, 1);
+$ease-out:  cubic-bezier(.16, 1, .3, 1);
+$spring:    cubic-bezier(.34, 1.4, .5, 1);
+
+// ---- Layout ----------------------------------------------------
+$wrap:      1240px;
+$gutter:    clamp(20px, 5vw, 48px);
+
+// ---- Type ------------------------------------------------------
+$font-display: "Rubik", system-ui, sans-serif;
+$font-body:    "Rubik", system-ui, sans-serif;
+$font-mono:    "IBM Plex Mono", ui-monospace, monospace;
+
+// ============================================================
+//  Mirror every token onto :root as a CSS custom property.
+//  --grad and --grad-warm both point at the one brand gradient.
+// ============================================================
+:root {
+  --bg: #{$bg};
+  --bg-2: #{$bg-2};
+  --bg-3: #{$bg-3};
+  --panel: #{$panel};
+  --panel-2: #{$panel-2};
+  --line: #{$line};
+  --line-2: #{$line-2};
+
+  --ink: #{$ink};
+  --ink-dim: #{$ink-dim};
+  --muted: #{$muted};
+  --faint: #{$faint};
+
+  --brand: #{$brand};
+  --mint: #{$mint};
+  --sky: #{$sky};
+  --sky-soft: #{$sky-soft};
+
+  --grad: #{$gradient-brand};
+  --grad-warm: #{$gradient-brand};
+  --glow-mint: #{$glow-mint};
+
+  --radius: #{$radius};
+  --radius-sm: #{$radius-sm};
+  --radius-lg: #{$radius-lg};
+  --ease: #{$ease};
+  --ease-out: #{$ease-out};
+  --spring: #{$spring};
+
+  --wrap: #{$wrap};
+  --gutter: #{$gutter};
+
+  --font-display: #{$font-display};
+  --font-body: #{$font-body};
+  --font-mono: #{$font-mono};
+}

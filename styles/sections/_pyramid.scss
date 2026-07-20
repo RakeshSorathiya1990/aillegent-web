@@ -1,0 +1,169 @@
+// ============================================================
+//  Scroll-pinned brand pyramid — sticky stage builds on scroll
+// ============================================================
+@use '../abstracts/breakpoints' as *;
+
+.pin {
+  position: relative;
+  height: 300vh;
+}
+
+.pin-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pin-grid {
+  width: min(var(--wrap), 92vw);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: clamp(30px, 5vw, 72px);
+  align-items: center;
+}
+
+.pin-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.pin-step {
+  opacity: .3;
+  transform: translateX(-6px);
+  transition: opacity .5s var(--ease), transform .5s var(--ease);
+
+  &.active {
+    opacity: 1;
+    transform: none;
+  }
+
+  .lbl {
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--brand);
+    display: block;
+    margin-bottom: 9px;
+  }
+
+  h3 {
+    font-size: clamp(1.45rem, 2.5vw, 2.05rem);
+    letter-spacing: -.02em;
+  }
+
+  p {
+    color: var(--muted);
+    margin-top: 10px;
+    max-width: 42ch;
+  }
+}
+
+.pin-vis svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  display: block;
+}
+
+.pyr-tier {
+  opacity: .2;
+  transform: translateY(10px);
+  transition: opacity .55s var(--ease), transform .55s var(--ease);
+  transform-box: fill-box;
+  transform-origin: center;
+
+  &.active {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.pyr-label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  fill: #FFFFFF;
+  opacity: 0;
+  transition: opacity .5s .1s;
+}
+
+.pyr-sub {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  fill: #FFFFFFD9;
+  opacity: 0;
+  transition: opacity .5s .1s;
+}
+
+.pyr-tier.active .pyr-label,
+.pyr-tier.active .pyr-sub {
+  opacity: 1;
+}
+
+// screenshot mode: unpin so the pinned stage renders inline
+html.shot .pin {
+  height: auto;
+}
+
+html.shot .pin-stage {
+  position: static;
+  height: auto;
+  padding: 90px 0;
+}
+
+// ---- pinned on ALL screens: stack + compact so it always fits the viewport ----
+@include mq(lg) {
+  .pin-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(20px, 5vh, 56px);
+    align-content: center;
+  }
+
+  .pin-copy > .h2 {
+    font-size: clamp(1.5rem, 4.6vw, 2.2rem);
+    margin-bottom: clamp(14px, 3.5vh, 40px) !important;
+  }
+
+  .pin-steps {
+    gap: clamp(14px, 3vh, 30px);
+  }
+
+  .pin-vis svg {
+    max-height: 46vh;
+    width: auto;
+    margin-inline: auto;
+  }
+}
+
+@include mq(sm) {
+  .pin-step h3 {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+
+  .pin-step p {
+    font-size: .92rem;
+    max-width: none;
+  }
+
+  .pin-vis svg {
+    max-height: 34vh;
+  }
+}
+
+// short viewports: drop step descriptions, give the pyramid room
+@media (max-height: 640px) {
+  .pin-step p {
+    display: none;
+  }
+
+  .pin-vis svg {
+    max-height: 46vh;
+  }
+}

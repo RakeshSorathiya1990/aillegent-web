@@ -1,0 +1,113 @@
+// ============================================================
+//  Footer — .footer and children
+// ============================================================
+@use '../abstracts/breakpoints' as *;
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 80px 0 42px;
+  position: relative;
+  z-index: 1;
+}
+
+.foot-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: clamp(28px, 5vw, 64px);
+}
+
+.foot-brand p {
+  color: var(--muted);
+  max-width: 34ch;
+  margin-top: 18px;
+  font-size: .94rem;
+}
+
+.foot-contact a:hover {
+  color: var(--mint);
+}
+
+.foot-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+
+  a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    border: 1px solid var(--line);
+    color: var(--ink-dim);
+    transition: color .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease), transform .2s var(--ease);
+
+    &:hover {
+      color: #FFFFFF;
+      background: var(--grad);
+      border-color: transparent;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.foot-col {
+  h4 {
+    font-family: var(--font-mono);
+    font-size: .7rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin-bottom: 18px;
+    font-weight: 400;
+  }
+
+  a {
+    display: block;
+    color: var(--ink-dim);
+    padding: 7px 0;
+    font-size: .94rem;
+    transition: color .2s;
+
+    &:hover {
+      color: var(--mint);
+    }
+  }
+}
+
+.foot-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 56px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+  color: var(--faint);
+  font-size: .85rem;
+}
+
+.foot-legal {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+
+  span {
+    color: var(--muted);
+  }
+}
+
+@include mq(sm) {
+  .foot-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 20px;
+  }
+
+  .foot-brand {
+    grid-column: span 2;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 20px;
+    margin-bottom: 8px;
+  }
+}

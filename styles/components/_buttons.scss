@@ -1,0 +1,90 @@
+// ============================================================
+//  Buttons — .btn, primary/ghost/lg, .arw, .btn-text, .btn-row
+// ============================================================
+
+.btn {
+  --h: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55em;
+  height: var(--h);
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: .95rem;
+  line-height: 1;
+  white-space: nowrap;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  position: relative;
+  transition: transform .3s var(--spring), box-shadow .3s var(--ease), background .3s var(--ease), border-color .3s var(--ease), color .3s var(--ease);
+  will-change: transform;
+
+  .arw {
+    display: inline-block;
+    transition: transform .34s var(--spring);
+  }
+
+  &:hover .arw {
+    transform: translateX(4px);
+  }
+}
+
+.btn-primary {
+  background: var(--mint);
+  color: #04130D;
+  border: 1.5px solid var(--mint);
+  box-shadow: 0 0 0 #25D79B00, 0 10px 30px -10px #25D79B66;
+
+  &:hover {
+    background: #11AB80;
+    border-color: #11AB80;
+    color: #04130D;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 22px #25D79B80;
+  }
+}
+
+.btn-ghost {
+  background: #FFFFFF05;
+  border: 1.5px solid var(--line-2);
+  color: var(--ink);
+
+  &:hover {
+    border-color: var(--mint);
+    color: var(--mint);
+    transform: translateY(-2px);
+    background: #25D79B0D;
+  }
+}
+
+.btn-lg {
+  --h: 56px;
+  padding: 0 1.7rem;
+  font-size: 1rem;
+}
+
+.btn-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  font-weight: 600;
+  color: var(--mint);
+  width: fit-content;
+
+  .arw {
+    transition: transform .3s var(--spring);
+  }
+
+  &:hover .arw {
+    transform: translateX(4px);
+  }
+}

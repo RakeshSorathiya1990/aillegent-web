@@ -1,0 +1,32 @@
+// ============================================================
+//  Note / callout — .note, .ni
+// ============================================================
+
+.note {
+  border: 1px solid #0C13201A;
+  border-radius: var(--radius-sm);
+  padding: 22px 24px;
+  background: #0E9E760D;
+  box-shadow: 0 14px 34px -28px #0C13201A;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+
+  .ni {
+    color: var(--brand);
+    flex: none;
+    margin-top: 2px;
+  }
+
+  h4 {
+    font-family: var(--font-body);
+    font-size: .98rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  p {
+    color: var(--muted);
+    font-size: .94rem;
+  }
+}

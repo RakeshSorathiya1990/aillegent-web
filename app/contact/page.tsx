@@ -1,127 +1,106 @@
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Phone } from "lucide-react";
-import Image from "next/image";
-import Footer from "@/components/ui/footer";
-import Link from "next/link";
-import Header from "@/components/ui/header";
+import type { Metadata } from "next"
+import Link from "next/link"
+import Image from "next/image"
+import ContactForm from "@/components/forms/ContactForm"
+import { site } from "@/lib/site"
+
+export const metadata: Metadata = {
+  title: "Contact — Tell Us What You Are Building",
+  description:
+    "Share the product, AI opportunity, platform challenge, or delivery bottleneck you want to improve. We will help identify a practical next step.",
+  alternates: { canonical: "/contact" },
+}
 
 export default function ContactPage() {
   return (
-    <div>
-      {/* Header */}
-    <Header></Header>
-
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-24 md:py-32">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-balance">
-            Let’s build the future, together.
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
-            Ready to turn your vision into reality? Let's talk about how we can
-            help you build powerful software solutions for your business.
-          </p>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="container mx-auto px-4 pb-24">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <Card className="p-8">
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Name *</Label>
-                    <Input id="name" placeholder="Your name" required />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="your@email.com"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="company">Company</Label>
-                  <Input id="company" placeholder="Your company name" />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message *</Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Message..."
-                    className="min-h-32"
-                    required
-                  />
-                </div>
-
-                <Button type="submit" size="lg" className="w-full md:w-auto">
-                  Send Message
-                </Button>
-              </form>
-            </Card>
+    <>
+      {/* ===== HERO ===== */}
+      <section className="phero phero-center phero-og">
+        <div className="glow g1" />
+        <div className="glow g2" />
+        <Image className="phero-bg-img" src="/img/og-cover.jpg" alt="" aria-hidden="true" fill sizes="100vw" priority />
+        <div className="wrap phero-grid">
+          <div>
+            <div className="breadcrumb">
+              <Link href="/">Home</Link>
+              <span className="sep">/</span>
+              <span>Contact</span>
+            </div>
+            <h1>
+              Tell us what you are building—or what is <span className="grad-text">holding it back</span>
+            </h1>
+            <p className="lead">
+              Share the product, the AI opportunity, the platform challenge, or the delivery bottleneck you want to
+              improve. We will help identify a practical next step.
+            </p>
           </div>
-
-          {/* Contact Information */}
-          <div className="space-y-6">
-            <Card className="p-6 space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                  <Mail className="h-5 w-5 text-primary" />
-                </div>
-                <div className="space-y-1">
-                  <h3 className="font-semibold">Email</h3>
-                  <p className="text-sm text-muted-foreground">
-                    info@aillegent.com
-                  </p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6 space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                  <Phone className="h-5 w-5 text-primary" />
-                </div>
-                <div className="space-y-1">
-                  <h3 className="font-semibold">Phone</h3>
-                  <p className="text-sm text-muted-foreground">
-                    +(91)- 9028321652
-                  </p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6 space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                  <MapPin className="h-5 w-5 text-primary" />
-                </div>
-                <div className="space-y-1">
-                  <h3 className="font-semibold">Location</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Remote-first team serving clients globally
-                  </p>
-                </div>
-              </div>
-            </Card>
+          <div className="phero-vis" data-animate aria-hidden="true">
+            <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <linearGradient id="vg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stopColor="#25D79B" />
+                  <stop offset="1" stopColor="#3B7DE0" />
+                </linearGradient>
+              </defs>
+              <rect className="v-panel" x="40" y="44" width="320" height="312" rx="20" />
+              <text x="64" y="82" className="v-kick">CONVERSATION</text>
+              <path className="v-line" data-draw d="M64 96 H336" />
+              <rect className="v-panel" x="64" y="116" width="184" height="58" rx="15" />
+              <rect className="v-white" x="82" y="134" width="120" height="7" rx="3.5" opacity=".72" />
+              <rect className="v-white" x="82" y="150" width="84" height="7" rx="3.5" opacity=".34" />
+              <rect className="v-tile" x="150" y="194" width="186" height="58" rx="15" />
+              <rect className="v-mint" x="168" y="212" width="112" height="7" rx="3.5" />
+              <rect className="v-mint" x="168" y="228" width="76" height="7" rx="3.5" opacity=".55" />
+              <rect className="v-panel" x="64" y="272" width="96" height="40" rx="14" />
+              <circle cx="90" cy="292" r="5" className="v-mint" />
+              <circle cx="110" cy="292" r="5" className="v-mint" opacity=".6" />
+              <circle cx="130" cy="292" r="5" className="v-mint" opacity=".3" />
+              <rect className="v-line" x="64" y="326" width="272" height="2" rx="1" />
+              <circle cx="312" cy="336" r="20" fill="url(#vg)" />
+              <path className="v-ico-w" d="M304 336 h14 M313 331 l5 5 -5 5" />
+            </svg>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <Footer></Footer>
-    </div>
-  );
+      {/* ===== CONTACT ===== */}
+      <section className="section">
+        <div className="wrap">
+          <div className="contact-grid">
+            <ContactForm />
+
+            <div className="contact-side" data-animate>
+              <div className="contact-item">
+                <span className="ci">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+                </span>
+                <div>
+                  <h4>Email</h4>
+                  <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+                </div>
+              </div>
+              <div className="contact-item">
+                <span className="ci">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z" /></svg>
+                </span>
+                <div>
+                  <h4>Response</h4>
+                  <p>We review context before replying.</p>
+                </div>
+              </div>
+              <div className="contact-item">
+                <span className="ci">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M20 10c0 5.5-8 12-8 12s-8-6.5-8-12a8 8 0 0 1 16 0z" /><circle cx="12" cy="10" r="3" /></svg>
+                </span>
+                <div>
+                  <h4>Location</h4>
+                  <p>Remote-first team · {site.location}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  )
 }

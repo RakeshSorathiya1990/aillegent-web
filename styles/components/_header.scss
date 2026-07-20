@@ -1,0 +1,109 @@
+// ============================================================
+//  Header / nav — .site-header, .nav, .brand, links, cta, scrolled
+// ============================================================
+@use '../abstracts/breakpoints' as *;
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 80;
+  transition: background .4s var(--ease), border-color .4s var(--ease), backdrop-filter .4s;
+
+  &.scrolled {
+    background: #FAFBF8D1;
+    backdrop-filter: blur(18px) saturate(150%);
+    box-shadow: 0 1px 0 var(--line), 0 6px 24px -18px #0C132059;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+  gap: 20px;
+
+  // compact header logo
+  .brand-logo {
+    height: 34px;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex: none;
+}
+
+.brand-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+  flex: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  a {
+    font-size: .93rem;
+    color: var(--muted);
+    position: relative;
+    padding: 6px 0;
+    transition: color .2s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1.5px;
+      width: 0;
+      background: var(--mint);
+      transition: width .3s var(--ease);
+    }
+
+    &:hover {
+      color: var(--ink);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &.active {
+      color: var(--ink);
+    }
+
+    &.active::after {
+      width: 100%;
+    }
+  }
+}
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: none;
+
+  .btn {
+    --h: 46px;
+    padding: 0 1.35rem;
+    font-size: .92rem;
+  }
+}
+
+@include mq(lg) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-cta .btn:not(.menu-btn) {
+    display: none;
+  }
+}
