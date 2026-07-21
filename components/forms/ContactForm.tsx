@@ -1,7 +1,7 @@
 "use client"
 
 import { useActionState } from "react"
-import Select from "@/components/ui/Select"
+import Select from "@/components/ui/select"
 import { submitContact, type ContactState } from "@/app/contact/actions"
 
 const initialState: ContactState = { ok: false, message: "" }
