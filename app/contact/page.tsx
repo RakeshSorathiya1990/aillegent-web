@@ -3,17 +3,28 @@ import Link from "next/link"
 import Image from "next/image"
 import ContactForm from "@/components/forms/ContactForm"
 import { site } from "@/lib/site"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Contact — Tell Us What You Are Building",
   description:
-    "Share the product, AI opportunity, platform challenge, or delivery bottleneck you want to improve. We will help identify a practical next step.",
+    "Tell us about your software product, AI opportunity, or platform challenge and we'll help identify a practical next step. Get in touch with Aillegent.",
   alternates: { canonical: "/contact" },
 }
 
 export default function ContactPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+            { "@type": "ListItem", position: 2, name: "Contact", item: "https://aillegent.com/contact" },
+          ],
+        }}
+      />
       {/* ===== HERO ===== */}
       <section className="phero phero-center phero-og">
         <div className="glow g1" />

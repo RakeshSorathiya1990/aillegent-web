@@ -1,17 +1,29 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Intellectual Property | Industries",
   description:
-    "Bring clarity to the patent and IP lifecycle — filing processes, deadline awareness, correspondence, lifecycle management, office actions, and law-firm team platforms.",
+    "Custom software for intellectual property — filing, deadlines, correspondence, and patent lifecycle management in one connected, dependable operating view.",
   alternates: { canonical: "/industries/intellectual-property" },
 }
 
 export default function IntellectualPropertyIndustryPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+            { "@type": "ListItem", position: 2, name: "Industries", item: "https://aillegent.com/industries" },
+            { "@type": "ListItem", position: 3, name: "Intellectual Property", item: "https://aillegent.com/industries/intellectual-property" },
+          ],
+        }}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero">
         <div className="glow g1" />
@@ -37,7 +49,7 @@ export default function IntellectualPropertyIndustryPage() {
             <Image
               className="shot"
               src="/img/ind-ip.jpg"
-              alt="A patent journey through checkpoints — illustrative"
+              alt="A patent journey through checkpoints"
               width={1200}
               height={751}
               loading="lazy"

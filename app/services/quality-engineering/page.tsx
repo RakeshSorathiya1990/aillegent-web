@@ -1,16 +1,41 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Quality Engineering",
   description:
-    "Build quality into the delivery cycle — connecting business scenarios, test environments, UAT, production checks, and automation so teams release with confidence.",
+    "Quality engineering and test automation services — automated web, API, and performance testing that gives your team the confidence to release faster.",
   alternates: { canonical: "/services/quality-engineering" },
 }
 
 export default function QualityEngineeringPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+              { "@type": "ListItem", position: 2, name: "Services", item: "https://aillegent.com/services" },
+              { "@type": "ListItem", position: 3, name: "Quality Engineering", item: "https://aillegent.com/services/quality-engineering" },
+            ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Quality Engineering",
+            serviceType: "Quality Engineering",
+            url: "https://aillegent.com/services/quality-engineering",
+            description:
+              "Build quality into the delivery cycle — connecting business scenarios, test environments, UAT, production checks, and automation so teams release with confidence.",
+            provider: { "@type": "Organization", "@id": "https://aillegent.com/#organization" },
+            areaServed: "Worldwide",
+          },
+        ]}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero">
         <div className="glow g1" />

@@ -2,17 +2,28 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import BrandPyramid from "@/components/motion/BrandPyramid"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Aillegent brings product, AI, data, cloud, quality, and cost thinking into one engineering conversation — and one accountable team.",
+    "Aillegent brings product, AI, data, cloud, quality, and cost engineering into one accountable team — specialists who connect product ambition to production reality.",
   alternates: { canonical: "/about" },
 }
 
 export default function AboutPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+            { "@type": "ListItem", position: 2, name: "About", item: "https://aillegent.com/about" },
+          ],
+        }}
+      />
       {/* ===== HERO ===== */}
       <section className="phero phero-center">
         <div className="glow g1" />

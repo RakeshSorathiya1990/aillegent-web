@@ -1,16 +1,41 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Applied AI | ML, LLMs & Agentic Automation",
   description:
-    "Apply AI where it changes real outcomes — AI products, machine learning, custom LLMs, MLOps, LLMOps, and agentic automation built for practical production use.",
+    "Applied AI development services — production-grade AI products, custom LLM systems, and agentic automation built to reach real users, not just demos.",
   alternates: { canonical: "/services/applied-ai" },
 }
 
 export default function AppliedAIPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+              { "@type": "ListItem", position: 2, name: "Services", item: "https://aillegent.com/services" },
+              { "@type": "ListItem", position: 3, name: "Applied AI", item: "https://aillegent.com/services/applied-ai" },
+            ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Applied AI",
+            serviceType: "Applied AI",
+            url: "https://aillegent.com/services/applied-ai",
+            description:
+              "Apply AI where it changes real outcomes — AI products, machine learning, custom LLMs, MLOps, LLMOps, and agentic automation built for practical production use.",
+            provider: { "@type": "Organization", "@id": "https://aillegent.com/#organization" },
+            areaServed: "Worldwide",
+          },
+        ]}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero">
         <div className="glow g1" />

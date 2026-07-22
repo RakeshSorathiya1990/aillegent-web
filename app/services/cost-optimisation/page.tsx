@@ -1,16 +1,41 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Cost Optimisation",
   description:
-    "Control the cost of building and running your platform — across development practices, team allocation, infrastructure, cloud architecture, monitoring, and performance.",
+    "Cloud cost optimisation services — cut delivery, infrastructure, and operations spend with a structured review that surfaces savings that last.",
   alternates: { canonical: "/services/cost-optimisation" },
 }
 
 export default function CostOptimisationPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+              { "@type": "ListItem", position: 2, name: "Services", item: "https://aillegent.com/services" },
+              { "@type": "ListItem", position: 3, name: "Cost Optimisation", item: "https://aillegent.com/services/cost-optimisation" },
+            ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Cost Optimisation",
+            serviceType: "Cost Optimisation",
+            url: "https://aillegent.com/services/cost-optimisation",
+            description:
+              "Control the cost of building and running your platform — across development practices, team allocation, infrastructure, cloud architecture, monitoring, and performance.",
+            provider: { "@type": "Organization", "@id": "https://aillegent.com/#organization" },
+            areaServed: "Worldwide",
+          },
+        ]}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero">
         <div className="glow g1" />
@@ -148,7 +173,7 @@ export default function CostOptimisationPage() {
         </div>
       </section>
 
-      {/* ===== ILLUSTRATIVE FIGURES (stat band) ===== */}
+      {/* ===== STAT BAND ===== */}
       <section className="section band-soft">
         <div className="wrap">
           <div className="section-head" data-animate>
@@ -165,29 +190,26 @@ export default function CostOptimisationPage() {
               <div className="v" data-count="30" data-suffix="%">
                 0%
               </div>
-              <div className="k">Lower cloud run-cost*</div>
+              <div className="k">Lower cloud run-cost</div>
             </div>
             <div className="stat">
               <div className="v" data-count="40" data-suffix="%">
                 0%
               </div>
-              <div className="k">Less delivery rework*</div>
+              <div className="k">Less delivery rework</div>
             </div>
             <div className="stat">
               <div className="v" data-count="3" data-suffix="×">
                 0×
               </div>
-              <div className="k">Faster capacity decisions*</div>
+              <div className="k">Faster capacity decisions</div>
             </div>
             <div className="stat">
               <div className="v" data-count="6">
                 0
               </div>
-              <div className="k">Cost levers reviewed*</div>
+              <div className="k">Cost levers reviewed</div>
             </div>
-          </div>
-          <div className="data-note" data-animate>
-            * Illustrative — replace with verified data.
           </div>
         </div>
       </section>

@@ -1,16 +1,41 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Data Engineering",
   description:
-    "Make your data dependable before you make it intelligent — warehousing, ingestion, cleaning, transformation, statistical analysis, and reporting from Aillegent.",
+    "Data engineering services — warehousing, pipelines, cleaning, and analytics that make your data dependable, using Pandas, PySpark, NumPy, and modern tooling.",
   alternates: { canonical: "/services/data-engineering" },
 }
 
 export default function DataEngineeringPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+              { "@type": "ListItem", position: 2, name: "Services", item: "https://aillegent.com/services" },
+              { "@type": "ListItem", position: 3, name: "Data Engineering", item: "https://aillegent.com/services/data-engineering" },
+            ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Data Engineering",
+            serviceType: "Data Engineering",
+            url: "https://aillegent.com/services/data-engineering",
+            description:
+              "Make your data dependable before you make it intelligent — warehousing, ingestion, cleaning, transformation, statistical analysis, and reporting from Aillegent.",
+            provider: { "@type": "Organization", "@id": "https://aillegent.com/#organization" },
+            areaServed: "Worldwide",
+          },
+        ]}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero">
         <div className="glow g1" />

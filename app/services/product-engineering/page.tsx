@@ -1,16 +1,41 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Product Engineering | Custom Software & Architecture",
   description:
-    "Turn product requirements into software people can rely on — custom development, frontend and backend engineering, APIs, architecture, and production readiness.",
+    "Custom software product development — platforms, backends, and APIs engineered around your business requirements, from architecture through to production.",
   alternates: { canonical: "/services/product-engineering" },
 }
 
 export default function ProductEngineeringPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+              { "@type": "ListItem", position: 2, name: "Services", item: "https://aillegent.com/services" },
+              { "@type": "ListItem", position: 3, name: "Product Engineering", item: "https://aillegent.com/services/product-engineering" },
+            ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Product Engineering",
+            serviceType: "Product Engineering",
+            url: "https://aillegent.com/services/product-engineering",
+            description:
+              "Turn product requirements into software people can rely on — custom development, frontend and backend engineering, APIs, architecture, and production readiness.",
+            provider: { "@type": "Organization", "@id": "https://aillegent.com/#organization" },
+            areaServed: "Worldwide",
+          },
+        ]}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero">
         <div className="glow g1" />

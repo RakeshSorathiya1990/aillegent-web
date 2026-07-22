@@ -1,17 +1,29 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Recruitment | Industries",
   description:
-    "From vendor requirement to the right candidate, in one connected flow — tools that capture the requirement, structure it for review, and support organised candidate matching.",
+    "Custom recruitment software — capture vendor requirements, structure them for review, and support organised, transparent candidate matching in one connected flow.",
   alternates: { canonical: "/industries/recruitment" },
 }
 
 export default function RecruitmentIndustryPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+            { "@type": "ListItem", position: 2, name: "Industries", item: "https://aillegent.com/industries" },
+            { "@type": "ListItem", position: 3, name: "Recruitment", item: "https://aillegent.com/industries/recruitment" },
+          ],
+        }}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero">
         <div className="glow g1" />
@@ -38,7 +50,7 @@ export default function RecruitmentIndustryPage() {
             <Image
               className="shot"
               src="/img/ind-recruit.jpg"
-              alt="A requirement matched to the right candidate — illustrative"
+              alt="A requirement matched to the right candidate"
               width={1200}
               height={751}
               loading="lazy"

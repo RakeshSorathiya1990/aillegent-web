@@ -65,25 +65,51 @@ export const metadata: Metadata = {
 
 const orgJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "ProfessionalService"],
+  "@id": `${site.url}/#organization`,
   name: site.name,
+  legalName: site.name,
   url: site.url,
-  logo: `${site.url}/img/aillegent-mark.png`,
+  logo: `${site.url}/img/aillegent-logo.png`,
+  image: `${site.url}${site.ogImage}`,
   email: site.email,
   telephone: site.phone,
+  slogan: site.tagline,
+  description: site.description,
   address: {
     "@type": "PostalAddress",
     addressLocality: "Gandhinagar",
+    addressRegion: "Gujarat",
     addressCountry: "IN",
   },
-  description: site.description,
+  areaServed: "Worldwide",
+  sameAs: [site.linkedin],
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: site.email,
+    telephone: site.phone,
+    contactType: "sales",
+    areaServed: "Worldwide",
+    availableLanguage: ["English"],
+  },
+  knowsAbout: [
+    "Custom Software Development",
+    "Product Engineering",
+    "Applied AI",
+    "Data Engineering",
+    "Cloud Platform Engineering",
+    "Quality Engineering",
+    "Cost Optimisation",
+  ],
 }
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${site.url}/#website`,
   name: site.name,
   url: site.url,
+  publisher: { "@id": `${site.url}/#organization` },
 }
 
 export default function RootLayout({

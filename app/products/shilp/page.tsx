@@ -1,17 +1,42 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Shilp — Cinematic Indian-style Prompt Generation",
   description:
-    "Shilp turns a creative requirement into richer AI image and video prompts with Indian cultural and cinematic context.",
+    "Shilp is an AI prompt generator for Indian-style cinematic storytelling — turn an idea, scene, or brand into rich prompts for image and video creation.",
   alternates: { canonical: "/products/shilp" },
 }
 
 export default function ShilpPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+              { "@type": "ListItem", position: 2, name: "Products", item: "https://aillegent.com/products" },
+              { "@type": "ListItem", position: 3, name: "Shilp", item: "https://aillegent.com/products/shilp" },
+            ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Shilp",
+            applicationCategory: "MultimediaApplication",
+            operatingSystem: "Web",
+            url: "https://aillegent.com/products/shilp",
+            description:
+              "Shilp turns a creative requirement into richer AI image and video prompts with Indian cultural and cinematic context.",
+            publisher: { "@type": "Organization", "@id": "https://aillegent.com/#organization" },
+          },
+        ]}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero">
         <div className="glow g1" />

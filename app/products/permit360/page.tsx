@@ -1,17 +1,42 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Permit360",
   description:
-    "Permit360 is the electronic work permit system for modern plants — configurable permits and approval routes, one-click permit-to-work, live dashboards, and a complete audit trail.",
+    "Permit360 is an electronic permit-to-work (e-PTW) system for modern plants — configurable permits, approvals, and live visibility for industrial safety.",
   alternates: { canonical: "/products/permit360" },
 }
 
 export default function Permit360Page() {
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+              { "@type": "ListItem", position: 2, name: "Products", item: "https://aillegent.com/products" },
+              { "@type": "ListItem", position: 3, name: "Permit360", item: "https://aillegent.com/products/permit360" },
+            ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Permit360",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            url: "https://aillegent.com/products/permit360",
+            description:
+              "Permit360 is the electronic work permit system for modern plants — configurable permits and approval routes, one-click permit-to-work, live dashboards, and a complete audit trail.",
+            publisher: { "@type": "Organization", "@id": "https://aillegent.com/#organization" },
+          },
+        ]}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero">
         <div className="glow g1" />

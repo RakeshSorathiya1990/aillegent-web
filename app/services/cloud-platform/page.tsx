@@ -1,16 +1,41 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Cloud & Platform Engineering",
   description:
-    "Cloud foundations that make releases repeatable, systems observable, access controlled, and infrastructure cost visible — deployment, CI/CD, containers, monitoring, and governance.",
+    "Cloud and platform engineering services — secure deployment, CI/CD, containers, monitoring, and governance for repeatable, production-ready releases.",
   alternates: { canonical: "/services/cloud-platform" },
 }
 
 export default function CloudPlatformPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+              { "@type": "ListItem", position: 2, name: "Services", item: "https://aillegent.com/services" },
+              { "@type": "ListItem", position: 3, name: "Cloud & Platform", item: "https://aillegent.com/services/cloud-platform" },
+            ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Cloud & Platform Engineering",
+            serviceType: "Cloud & Platform Engineering",
+            url: "https://aillegent.com/services/cloud-platform",
+            description:
+              "Cloud foundations that make releases repeatable, systems observable, access controlled, and infrastructure cost visible — deployment, CI/CD, containers, monitoring, and governance.",
+            provider: { "@type": "Organization", "@id": "https://aillegent.com/#organization" },
+            areaServed: "Worldwide",
+          },
+        ]}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero">
         <div className="glow g1" />

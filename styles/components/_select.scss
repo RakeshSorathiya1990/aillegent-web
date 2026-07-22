@@ -52,11 +52,9 @@
 }
 
 .select-menu {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
-  right: 0;
-  z-index: 40;
+  // positioning is set inline (fixed, portaled to <body>); these are fallbacks
+  position: fixed;
+  z-index: 1000;
   margin: 0;
   padding: 6px;
   list-style: none;
@@ -67,10 +65,23 @@
   border-radius: 13px;
   box-shadow: 0 22px 50px -28px #0C132040, 0 2px 8px #0C13201A;
   animation: select-in .16s var(--ease-out);
+  overscroll-behavior: contain;
+}
+
+// flips above the control when there isn't room below
+.select-menu.up {
+  top: auto;
+  bottom: calc(100% + 8px);
+  animation: select-in-up .16s var(--ease-out);
 }
 
 @keyframes select-in {
   from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes select-in-up {
+  from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 

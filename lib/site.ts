@@ -3,7 +3,7 @@ export const site = {
   url: "https://aillegent.com",
   tagline: "Product Engineering, AI, Cloud & Quality",
   description:
-    "Build, deploy, test, and optimise intelligent digital products with Aillegent — from rapid MVP to enterprise-scale production.",
+    "Aillegent is a custom software development company — product engineering, applied AI, data, cloud, quality, and cost optimisation, from rapid MVP to production-scale.",
   email: "info@aillegent.com",
   phone: "+91 90283 21652",
   phoneHref: "+919028321652",

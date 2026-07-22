@@ -1,17 +1,29 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Advertising Technology | Industries",
   description:
-    "Turn campaign data into clearer operating decisions — campaign systems, monitoring, performance and conversion analysis across Google, Meta, and Bing channels.",
+    "Custom software for advertising technology — campaign systems, monitoring, and performance analysis across Google, Meta, and Bing channels.",
   alternates: { canonical: "/industries/advertising-technology" },
 }
 
 export default function AdvertisingTechnologyIndustryPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+            { "@type": "ListItem", position: 2, name: "Industries", item: "https://aillegent.com/industries" },
+            { "@type": "ListItem", position: 3, name: "Advertising Technology", item: "https://aillegent.com/industries/advertising-technology" },
+          ],
+        }}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero">
         <div className="glow g1" />
@@ -38,7 +50,7 @@ export default function AdvertisingTechnologyIndustryPage() {
             <Image
               className="shot"
               src="/img/ind-adtech.jpg"
-              alt="Campaign signals merging into one clear chart — illustrative"
+              alt="Campaign signals merging into one clear chart"
               width={1200}
               height={751}
               loading="lazy"

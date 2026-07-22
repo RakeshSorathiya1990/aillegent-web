@@ -1,17 +1,28 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Products — Shilp, Eventik & Permit360",
   description:
-    "Software Aillegent builds, owns, and runs — Shilp for cinematic creative prompts, Eventik for AI photo delivery and studio management, and Permit360 for electronic permit-to-work.",
+    "Software Aillegent builds, owns, and runs — Shilp for cinematic AI prompts, Eventik for AI photo delivery, and Permit360 for electronic permit-to-work.",
   alternates: { canonical: "/products" },
 }
 
 export default function ProductsPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+            { "@type": "ListItem", position: 2, name: "Products", item: "https://aillegent.com/products" },
+          ],
+        }}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero phero-center">
         <div className="glow g1" />

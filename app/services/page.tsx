@@ -1,16 +1,27 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Services | Product, AI, Cloud, Quality & Cost",
   description:
-    "Choose a focused engagement or combine capabilities across the whole lifecycle — product engineering, applied AI, cloud, quality, and cost optimisation from Aillegent.",
+    "End-to-end software development services — product engineering, applied AI, data engineering, cloud, quality, and cost optimisation for teams ready to scale.",
   alternates: { canonical: "/services" },
 }
 
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+            { "@type": "ListItem", position: 2, name: "Services", item: "https://aillegent.com/services" },
+          ],
+        }}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero phero-center">
         <div className="glow g1" />

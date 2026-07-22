@@ -1,16 +1,27 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Industries",
   description:
-    "Engineering that speaks your industry's language — product, AI, data, cloud, and quality capability applied across finance, intellectual property, advertising technology, and recruitment.",
+    "Domain-driven software development across finance, intellectual property, advertising technology, and recruitment — engineering shaped by how your industry works.",
   alternates: { canonical: "/industries" },
 }
 
 export default function IndustriesPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+            { "@type": "ListItem", position: 2, name: "Industries", item: "https://aillegent.com/industries" },
+          ],
+        }}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero phero-center">
         <div className="glow g1" />

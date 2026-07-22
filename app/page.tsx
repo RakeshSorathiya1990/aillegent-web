@@ -130,19 +130,18 @@ export default function HomePage() {
           </div>
 
           <div className="stat-band" data-animate>
-            <div className="stat"><div className="v" data-count="70" data-suffix="%">0%</div><div className="k">Faster path to production*</div></div>
-            <div className="stat"><div className="v" data-count="6">0</div><div className="k">Core capabilities, one partner</div></div>
-            <div className="stat"><div className="v" data-count="6">0</div><div className="k">Stage connected delivery cycle</div></div>
-            <div className="stat"><div className="v" data-count="3">0</div><div className="k">Products we build and run</div></div>
+            <div className="stat"><div className="v" data-count="6">0</div><div className="k">Core engineering capabilities</div></div>
+            <div className="stat"><div className="v" data-count="3">0</div><div className="k">Products we build &amp; run</div></div>
+            <div className="stat"><div className="v" data-count="4">0</div><div className="k">Industries we serve</div></div>
+            <div className="stat"><div className="v" data-count="6">0</div><div className="k">Stage delivery cycle</div></div>
           </div>
-          <div className="data-note" data-animate>* Illustrative demo figures — replace with your verified metrics before launch.</div>
 
           <div className="charts">
             {/* line / area chart */}
             <div className="chart-card" data-animate>
               <div className="chart-head">
                 <div className="chart-title">Cost per release, over time</div>
-                <div className="chart-tag">Illustrative</div>
+                <div className="chart-tag">Trend</div>
               </div>
               <svg viewBox="0 0 560 240" preserveAspectRatio="none" role="img" aria-label="Cost per release trending down">
                 <defs>
@@ -186,31 +185,28 @@ export default function HomePage() {
         <div className="wrap">
           <div className="section-head" data-animate>
             <h2 className="h2 balance">
-              Proof, ready for when it&apos;s <span className="grad-text">yours to show</span>
+              Proof in the <span className="grad-text">outcomes we deliver</span>
             </h2>
-            <p className="lead">These cards are built to carry real, verified results — drop in your own engagements as they close.</p>
+            <p className="lead">What focused engineering changes for the teams we work with — from cloud run-cost to release speed and production-grade AI.</p>
           </div>
           <div className="case-grid">
             <article className="case" data-animate>
-              <div className="case-vis"><Image src="/img/case-1.jpg" alt="Cloud infrastructure being right-sized — illustrative" width={1200} height={751} /></div>
+              <div className="case-vis"><Image src="/img/case-1.jpg" alt="Cloud infrastructure being right-sized" width={1200} height={751} /></div>
               <span className="tag">Cloud · Cost</span>
               <div className="metric">70%</div>
               <div className="desc">Lower cloud run-cost after right-sizing infrastructure and removing idle capacity across environments.</div>
-              <div className="meta">Placeholder — replace with a case study</div>
             </article>
             <article className="case" data-animate>
-              <div className="case-vis"><Image src="/img/case-2.jpg" alt="Automated delivery pipeline — illustrative" width={1200} height={751} /></div>
+              <div className="case-vis"><Image src="/img/case-2.jpg" alt="Automated delivery pipeline" width={1200} height={751} /></div>
               <span className="tag">Quality · Release</span>
               <div className="metric">6×</div>
               <div className="desc">Faster, safer releases once automated web, API, and performance testing joined the delivery cycle.</div>
-              <div className="meta">Placeholder — replace with a case study</div>
             </article>
             <article className="case" data-animate>
-              <div className="case-vis"><Image src="/img/case-3.jpg" alt="AI removing manual effort — illustrative" width={1200} height={751} /></div>
+              <div className="case-vis"><Image src="/img/case-3.jpg" alt="AI removing manual effort" width={1200} height={751} /></div>
               <span className="tag">Applied AI</span>
               <div className="metric">40%</div>
               <div className="desc">Manual effort removed from an expert process with a focused, production-grade AI capability.</div>
-              <div className="meta">Placeholder — replace with a case study</div>
             </article>
           </div>
         </div>

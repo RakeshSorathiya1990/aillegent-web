@@ -1,17 +1,29 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Finance | Industries",
   description:
-    "Finance operations that demand intelligence, control, and clarity — private equity and private debt operations, finance document intelligence, and AI-assisted market and trading research.",
+    "Custom software for finance teams — bring documents, data, deadlines, and processes into structured, dependable systems built around your domain.",
   alternates: { canonical: "/industries/finance" },
 }
 
 export default function FinanceIndustryPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+            { "@type": "ListItem", position: 2, name: "Industries", item: "https://aillegent.com/industries" },
+            { "@type": "ListItem", position: 3, name: "Finance", item: "https://aillegent.com/industries/finance" },
+          ],
+        }}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero">
         <div className="glow g1" />
@@ -37,7 +49,7 @@ export default function FinanceIndustryPage() {
             <Image
               className="shot"
               src="/img/ind-finance.jpg"
-              alt="Documents flowing into structured analysis — illustrative"
+              alt="Documents flowing into structured analysis"
               width={1200}
               height={751}
               loading="lazy"

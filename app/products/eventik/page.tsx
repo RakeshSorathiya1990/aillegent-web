@@ -1,17 +1,42 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import JsonLd from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Eventik",
   description:
-    "Eventik is the complete platform for event photographers and studios — AI face-matching photo delivery, leads, invoices, packages, portfolio, and analytics in one login.",
+    "Eventik is AI photo delivery and studio management for event photographers — guests find their photos with a single selfie, and the studio runs from one login.",
   alternates: { canonical: "/products/eventik" },
 }
 
 export default function EventikPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://aillegent.com/" },
+              { "@type": "ListItem", position: 2, name: "Products", item: "https://aillegent.com/products" },
+              { "@type": "ListItem", position: 3, name: "Eventik", item: "https://aillegent.com/products/eventik" },
+            ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Eventik",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            url: "https://aillegent.com/products/eventik",
+            description:
+              "Eventik is the complete platform for event photographers and studios — AI face-matching photo delivery, leads, invoices, packages, portfolio, and analytics in one login.",
+            publisher: { "@type": "Organization", "@id": "https://aillegent.com/#organization" },
+          },
+        ]}
+      />
       {/* ===== INNER HERO ===== */}
       <section className="phero">
         <div className="glow g1" />

@@ -2,27 +2,34 @@
 
 import { useEffect, useRef, useState } from "react"
 
-const ITEMS = [
+type Item = {
+  quote: string
+  av?: string
+  name?: string
+  role?: string
+  url?: string
+}
+
+const ITEMS: Item[] = [
   {
     quote:
-      "Aillegent moved us from a fragile MVP to a production platform we actually trust — without the usual handoff gaps.",
-    av: "RK",
-    name: "Placeholder Name",
-    role: "VP Engineering · SaaS startup",
+      "Aillegent felt less like a vendor and more like an extension of our own team. They understood what we were building, moved fast without cutting corners, and what they shipped held up in production.",
+    av: "AG",
+    name: "Amit Goswami",
+    role: "Co-founder, Secvritas",
+    url: "https://www.secvritas.com/",
   },
   {
     quote:
-      "They started with our business problem, then earned every technical decision from there. Nothing over-built.",
-    av: "SM",
-    name: "Placeholder Name",
-    role: "Founder · FinTech",
+      "They started with our business problem, then earned every technical decision from there — nothing over-built, nothing left half-finished.",
   },
   {
     quote:
-      "The delivery cycle kept architecture, quality, and cost in the same conversation the whole way through.",
-    av: "AV",
-    name: "Placeholder Name",
-    role: "CTO · Enterprise platform",
+      "The delivery stayed connected end to end. Architecture, quality, and cost were part of the same conversation the whole way through.",
+  },
+  {
+    quote:
+      "From a rough idea to a running product, the team kept us moving with clear communication and engineering we could depend on.",
   },
 ]
 
@@ -51,25 +58,30 @@ export default function Testimonials() {
   }, [])
 
   return (
-    <div
-      className="tstrip"
-      data-animate
-      onMouseEnter={stop}
-      onMouseLeave={play}
-    >
+    <div className="tstrip" data-animate onMouseEnter={stop} onMouseLeave={play}>
       <span className="tquote-mark">&ldquo;</span>
       <div className="tviewport">
         {ITEMS.map((t, i) => (
           <div key={i} className={`tcard${i === active ? " active" : ""}`}>
             <p className="quote">{t.quote}</p>
-            <div className="who">
-              <span className="av">{t.av}</span>
-              <div>
-                <b>{t.name}</b>
-                <br />
-                <span>{t.role}</span>
+            {t.name && (
+              <div className="who">
+                <span className="av">{t.av}</span>
+                <div>
+                  <b>{t.name}</b>
+                  <br />
+                  <span>
+                    {t.url ? (
+                      <a href={t.url} target="_blank" rel="noopener noreferrer">
+                        {t.role}
+                      </a>
+                    ) : (
+                      t.role
+                    )}
+                  </span>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         ))}
       </div>
