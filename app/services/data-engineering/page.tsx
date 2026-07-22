@@ -158,7 +158,7 @@ export default function DataEngineeringPage() {
               From scattered sources to analysis-ready datasets — the full path from raw data to answers people trust.
             </p>
           </div>
-          <div className="grid g-3" style={{ marginTop: 56 }}>
+          <div className="grid g-3 u-mt-56">
             <article className="card" data-animate>
               <div className="ico">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
@@ -238,7 +238,7 @@ export default function DataEngineeringPage() {
             </h2>
             <p className="lead">The tools we reach for across ingestion, transformation, analysis, and reporting.</p>
           </div>
-          <div className="tags" data-animate style={{ marginTop: 40 }}>
+          <div className="tags u-mt-40" data-animate>
             <span className="tag">Python</span>
             <span className="tag">Pandas</span>
             <span className="tag">PySpark</span>
@@ -258,7 +258,7 @@ export default function DataEngineeringPage() {
             </h2>
             <p className="lead">
               Clean data foundations power our{" "}
-              <Link href="/services/applied-ai" style={{ color: "var(--brand)", fontWeight: 500 }}>
+              <Link href="/services/applied-ai" className="link-brand">
                 Applied AI engagements
               </Link>
               , sharpen cost decisions, and make monitoring meaningful. Data Engineering is where the other capabilities

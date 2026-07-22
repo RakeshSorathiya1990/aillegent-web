@@ -105,11 +105,11 @@ export default function ProductEngineeringPage() {
               <text x="303" y="144" textAnchor="middle" className="v-kick">
                 PRODUCT
               </text>
-              <rect x="252" y="162" width="102" height="9" rx="4.5" className="v-line" style={{ fill: "#FFFFFF14" }} />
-              <rect x="252" y="180" width="76" height="9" rx="4.5" className="v-line" style={{ fill: "#FFFFFF14" }} />
-              <rect x="252" y="198" width="88" height="9" rx="4.5" className="v-line" style={{ fill: "#FFFFFF14" }} />
+              <rect x="252" y="162" width="102" height="9" rx="4.5" className="v-line" fill="#FFFFFF14" />
+              <rect x="252" y="180" width="76" height="9" rx="4.5" className="v-line" fill="#FFFFFF14" />
+              <rect x="252" y="198" width="88" height="9" rx="4.5" className="v-line" fill="#FFFFFF14" />
               <rect x="252" y="222" width="102" height="48" rx="8" className="v-tile" />
-              <text x="303" y="249" textAnchor="middle" className="v-lab" style={{ fontSize: "9px", letterSpacing: ".04em" }}>
+              <text x="303" y="249" textAnchor="middle" className="v-lab" fontSize="9px" letterSpacing=".04em">
                 Ships to production
               </text>
             </svg>
@@ -125,7 +125,7 @@ export default function ProductEngineeringPage() {
               From first requirement to a <span className="grad-text">production-ready product</span>
             </h2>
           </div>
-          <ul className="deliver" data-animate style={{ marginTop: 44 }}>
+          <ul className="deliver u-mt-44" data-animate>
             <li>
               <span className="ck">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
@@ -190,7 +190,7 @@ export default function ProductEngineeringPage() {
               not trend alone.
             </p>
           </div>
-          <div className="spec" data-animate style={{ marginTop: 44 }}>
+          <div className="spec u-mt-44" data-animate>
             <div className="spec-row">
               <div className="st">
                 <span className="rn">01</span>Monolithic architecture
@@ -231,7 +231,7 @@ export default function ProductEngineeringPage() {
           <div className="section-head" data-animate>
             <h2 className="h2 balance">The stack behind the build</h2>
           </div>
-          <div className="tags" data-animate style={{ marginTop: 36 }}>
+          <div className="tags u-mt-36" data-animate>
             <span className="tag">Java</span>
             <span className="tag">Node.js</span>
             <span className="tag">Python</span>

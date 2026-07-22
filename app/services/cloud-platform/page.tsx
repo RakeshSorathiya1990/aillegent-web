@@ -168,7 +168,7 @@ export default function CloudPlatformPage() {
               product grows.
             </p>
           </div>
-          <div className="spec" data-animate style={{ marginTop: 48 }}>
+          <div className="spec u-mt-48" data-animate>
             <div className="spec-row">
               <div className="st">
                 <span className="rn">01</span>Deployment
@@ -235,20 +235,20 @@ export default function CloudPlatformPage() {
               Optimise without losing <span className="grad-text">reliability</span>
             </h2>
           </div>
-          <div className="split" style={{ marginTop: 48 }}>
+          <div className="split u-mt-48">
             <div data-animate>
               <p className="lead">
                 Cloud cost optimisation is not simply reducing infrastructure spend. It means matching resources to
                 actual demand, identifying waste, improving observability, and making architecture and deployment choices
                 that remain efficient as the product grows.
               </p>
-              <div className="tags" style={{ marginTop: 24 }}>
+              <div className="tags u-mt-24">
                 <span className="tag">Match resources to demand</span>
                 <span className="tag">Identify waste</span>
                 <span className="tag">Improve observability</span>
                 <span className="tag">Efficient architecture</span>
               </div>
-              <div className="note" data-animate style={{ marginTop: 28 }}>
+              <div className="note u-mt-28" data-animate>
                 <span className="ni">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
                     <circle cx="12" cy="12" r="10" />

@@ -1,0 +1,45 @@
+// ============================================================
+//  Utilities — small reusable helpers that replace inline styles.
+//  Exact values match what was previously inline, so layout is identical.
+// ============================================================
+
+// ---- Spacing ----
+.u-mt-14 { margin-top: 14px; }
+.u-mt-18 { margin-top: 18px; }
+.u-mt-24 { margin-top: 24px; }
+.u-mt-26 { margin-top: 26px; }
+.u-mt-28 { margin-top: 28px; }
+.u-mt-30 { margin-top: 30px; }
+.u-mt-34 { margin-top: 34px; }
+.u-mt-36 { margin-top: 36px; }
+.u-mt-40 { margin-top: 40px; }
+.u-mt-44 { margin-top: 44px; }
+.u-mt-48 { margin-top: 48px; }
+.u-mt-52 { margin-top: 52px; }
+.u-mt-56 { margin-top: 56px; }
+.u-mb-34 { margin-bottom: 34px; }
+
+// ---- Flex helpers (used on .btn-row and grids) ----
+.u-jc-center { justify-content: center; }
+.u-ai-center { align-items: center; }
+
+// ---- Auto-fit grids ----
+.u-grid-fit-272 { grid-template-columns: repeat(auto-fit, minmax(272px, 1fr)); }
+.u-grid-fit-340 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+
+// ---- Chart-legend colour swatches ----
+.sw-mint  { background: var(--mint); }
+.sw-sky   { background: var(--sky); }
+.sw-brand { background: var(--brand); }
+
+// ---- Inline brand-coloured link ----
+.link-brand { color: var(--brand); font-weight: 500; }
+
+// ---- Visually-hidden honeypot field ----
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}

@@ -65,10 +65,10 @@ export default function AboutPage() {
             </h2>
             <p className="lead">
               Each step carries the context of the last — and our six-stage delivery cycle keeps every decision
-              connected. <Link href="/#cycle" style={{ color: "var(--brand)", fontWeight: 500 }}>See the cycle in action →</Link>
+              connected. <Link href="/#cycle" className="link-brand">See the cycle in action →</Link>
             </p>
           </div>
-          <div className="grid g-3" style={{ marginTop: 56 }}>
+          <div className="grid g-3 u-mt-56">
             <article className="card" data-animate><span className="cn">01</span><h3>Requirement &amp; domain analysis</h3><p>Understand the business goal, users, and domain context before committing to a solution.</p></article>
             <article className="card" data-animate><span className="cn">02</span><h3>Solution &amp; architecture</h3><p>Define functional and non-functional requirements and the architecture that fits them.</p></article>
             <article className="card" data-animate><span className="cn">03</span><h3>Documentation</h3><p>Capture decisions, interfaces, and delivery detail so the build stays aligned as it grows.</p></article>
@@ -91,7 +91,7 @@ export default function AboutPage() {
               governed enterprise platform — without losing the context in between.
             </p>
           </div>
-          <div className="growth" style={{ marginTop: 56 }}>
+          <div className="growth u-mt-56">
             <article className="gcard" data-animate><span className="g-idx">01 · Quick MVP</span><h3>Quick MVP</h3><p>Core product scope, architecture, delivery, and a release path for early market validation.</p></article>
             <article className="gcard" data-animate><span className="g-idx">02 · Startup Growth</span><h3>Startup Growth</h3><p>Feature growth, scalable systems, AI capability, automation, cloud foundations, and better engineering rhythms.</p></article>
             <article className="gcard" data-animate><span className="g-idx">03 · Enterprise Production</span><h3>Enterprise Production</h3><p>Deployment support, stabilisation, monitoring, governance, performance, reliability, and cost optimisation.</p></article>
@@ -107,11 +107,11 @@ export default function AboutPage() {
               <h2 className="h2 balance">
                 Start with the business problem, then earn the <span className="grad-text">technical complexity</span>
               </h2>
-              <p className="lead" style={{ marginTop: 18 }}>
+              <p className="lead u-mt-18">
                 We begin with requirements, domain context, system constraints, and the outcome that matters. The
                 architecture, technology choices, automation, and operational model follow from that work.
               </p>
-              <div className="tags" style={{ marginTop: 30 }}>
+              <div className="tags u-mt-30">
                 <span className="tag">Java</span>
                 <span className="tag">Node.js</span>
                 <span className="tag">Python</span>
@@ -131,8 +131,8 @@ export default function AboutPage() {
                 <rect x="20" y="110" width="148" height="80" rx="14" fill="none" stroke="url(#abFlow)" strokeWidth="1.8" />
                 <g stroke="#0E9E76" strokeWidth="1.8" fill="none"><circle cx="52" cy="146" r="14" /><circle cx="52" cy="146" r="7" /></g>
                 <circle cx="52" cy="146" r="2.5" fill="#0E9E76" />
-                <text x="76" y="140" style={{ fontFamily: "Rubik", fontWeight: 600, fontSize: "12px", fill: "#0C1320" }}>The business</text>
-                <text x="76" y="157" style={{ fontFamily: "Rubik", fontWeight: 600, fontSize: "12px", fill: "#0C1320" }}>problem</text>
+                <text x="76" y="140" fontFamily="Rubik" fontWeight={600} fontSize="12px" fill="#0C1320">The business</text>
+                <text x="76" y="157" fontFamily="Rubik" fontWeight={600} fontSize="12px" fill="#0C1320">problem</text>
                 <path data-draw fill="none" stroke="url(#abFlow)" strokeWidth="1.8" strokeLinecap="round" d="M168 150 C210 150 210 64 248 64" />
                 <path data-draw fill="none" stroke="url(#abFlow)" strokeWidth="1.8" strokeLinecap="round" d="M168 150 H248" />
                 <path data-draw fill="none" stroke="url(#abFlow)" strokeWidth="1.8" strokeLinecap="round" d="M168 150 C210 150 210 236 248 236" />
@@ -141,14 +141,14 @@ export default function AboutPage() {
                   <rect x="248" y="124" width="132" height="52" rx="12" />
                   <rect x="248" y="210" width="132" height="52" rx="12" />
                 </g>
-                <text x="268" y="68" style={{ fontFamily: "Rubik", fontWeight: 600, fontSize: "12.5px", fill: "#0C1320" }}>Architecture</text>
-                <text x="268" y="154" style={{ fontFamily: "Rubik", fontWeight: 600, fontSize: "12.5px", fill: "#0C1320" }}>Technology</text>
-                <text x="268" y="240" style={{ fontFamily: "Rubik", fontWeight: 600, fontSize: "12.5px", fill: "#0C1320" }}>Operations</text>
+                <text x="268" y="68" fontFamily="Rubik" fontWeight={600} fontSize="12.5px" fill="#0C1320">Architecture</text>
+                <text x="268" y="154" fontFamily="Rubik" fontWeight={600} fontSize="12.5px" fill="#0C1320">Technology</text>
+                <text x="268" y="240" fontFamily="Rubik" fontWeight={600} fontSize="12.5px" fill="#0C1320">Operations</text>
                 <g fill="#25D79B"><circle cx="248" cy="64" r="4.5" /><circle cx="248" cy="150" r="4.5" /><circle cx="248" cy="236" r="4.5" /></g>
               </svg>
             </div>
           </div>
-          <div className="note" style={{ marginTop: 48 }} data-animate>
+          <div className="note u-mt-48" data-animate>
             <span className="ni">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4M12 8h.01" /></svg>
             </span>
@@ -172,7 +172,7 @@ export default function AboutPage() {
                 Bring us the outcome that matters and the constraints around it — we will help define the architecture,
                 technology, and delivery path that fit.
               </p>
-              <div className="btn-row" style={{ justifyContent: "center" }}>
+              <div className="btn-row u-jc-center">
                 <Link href="/contact" className="btn btn-primary btn-lg">
                   Work with us <span className="arw">→</span>
                 </Link>

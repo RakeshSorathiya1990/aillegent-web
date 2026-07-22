@@ -37,7 +37,7 @@ export default function HomePage() {
               production.
             </p>
             <div className="hero-actions" data-animate>
-              <div className="btn-row" style={{ display: "flex", alignItems: "center" }}>
+              <div className="btn-row u-ai-center">
                 <Link href="/contact" className="btn btn-primary btn-lg">
                   Start a conversation <span className="arw">→</span>
                 </Link>
@@ -58,7 +58,7 @@ export default function HomePage() {
               One partner across the <span className="grad-text">product lifecycle</span>
             </h2>
           </div>
-          <div className="cap-grid" style={{ marginTop: 56 }}>
+          <div className="cap-grid u-mt-56">
             <article className="card" data-animate>
               <div className="ico">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="m18 16 4-4-4-4" /><path d="m6 8-4 4 4 4" /><path d="m14.5 4-5 16" /></svg>
@@ -108,7 +108,7 @@ export default function HomePage() {
               <p>Lower the cost of delivery, infrastructure, and ongoing operations.</p>
             </article>
           </div>
-          <div className="center" style={{ marginTop: 44 }} data-animate>
+          <div className="center u-mt-44" data-animate>
             <Link className="btn-text" href="/services">
               View all services <span className="arw">→</span>
             </Link>
@@ -154,7 +154,7 @@ export default function HomePage() {
                 <circle className="c-dot" cx="540" cy="182" r="5" />
                 <g className="c-axis" textAnchor="middle"><text x="20" y="236">M1</text><text x="204" y="236">M3</text><text x="388" y="236">M5</text><text x="540" y="236">M7</text></g>
               </svg>
-              <div className="legend"><span><i style={{ background: "var(--mint)" }} />Cloud + delivery cost</span><span><i style={{ background: "var(--sky)" }} />Trend</span></div>
+              <div className="legend"><span><i className="sw-mint" />Cloud + delivery cost</span><span><i className="sw-sky" />Trend</span></div>
             </div>
 
             {/* donut chart */}
@@ -171,7 +171,7 @@ export default function HomePage() {
                 <text className="donut-center" x="120" y="116">100%</text>
                 <text className="donut-sub" x="120" y="134">LIFECYCLE</text>
               </svg>
-              <div className="legend"><span><i style={{ background: "var(--mint)" }} />Build &amp; ship 45%</span><span><i style={{ background: "var(--sky)" }} />Quality 30%</span><span><i style={{ background: "var(--brand)" }} />Optimise 25%</span></div>
+              <div className="legend"><span><i className="sw-mint" />Build &amp; ship 45%</span><span><i className="sw-sky" />Quality 30%</span><span><i className="sw-brand" />Optimise 25%</span></div>
             </div>
           </div>
         </div>
@@ -218,7 +218,7 @@ export default function HomePage() {
           <div className="section-head" data-animate>
             <h2 className="h2 balance">The right engineering support at every stage</h2>
           </div>
-          <div className="growth" style={{ marginTop: 56 }}>
+          <div className="growth u-mt-56">
             <article className="gcard" data-animate><span className="g-idx">01 · Quick MVP</span><h3>Quick MVP</h3><p>Validate a focused product idea quickly with the right core features, architecture decisions, and delivery path.</p></article>
             <article className="gcard" data-animate><span className="g-idx">02 · Startup Growth</span><h3>Startup Growth</h3><p>Strengthen the platform with scalable development practices, automation, AI capability, and cloud foundations.</p></article>
             <article className="gcard" data-animate><span className="g-idx">03 · Enterprise Production</span><h3>Enterprise Production</h3><p>Add deployment support, stabilisation, governance, monitoring, performance engineering, and operational cost control.</p></article>
@@ -235,7 +235,7 @@ export default function HomePage() {
             </h2>
             <p className="lead">Our own products are the clearest proof of how we design, ship, and operate software in production.</p>
           </div>
-          <div className="prod-grid prod-grid-3" style={{ marginTop: 56 }}>
+          <div className="prod-grid prod-grid-3 u-mt-56">
             <article className="prod" data-animate>
               <div className="prod-vis"><Image src="/img/shilp-app.jpg" alt="" width={1500} height={1000} /></div>
               <div className="prod-body">
@@ -319,7 +319,7 @@ export default function HomePage() {
                 Whether you are validating an MVP, improving an existing platform, deploying AI, or bringing a production
                 environment under control, we can help define the next practical step.
               </p>
-              <div className="btn-row" style={{ justifyContent: "center" }}>
+              <div className="btn-row u-jc-center">
                 <Link href="/contact" className="btn btn-primary btn-lg">
                   Start a conversation <span className="arw">→</span>
                 </Link>

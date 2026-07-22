@@ -79,7 +79,7 @@ export default function ShilpPage() {
               From an idea to a <span className="grad-text">structured prompt</span>
             </h2>
           </div>
-          <div className="process" data-animate style={{ marginTop: "44px" }}>
+          <div className="process u-mt-44" data-animate>
             <div className="pstep">
               <div className="pn">01</div>
               <div className="pc">
@@ -120,7 +120,7 @@ export default function ShilpPage() {
               Give creative direction <span className="grad-text">more depth</span>
             </h2>
           </div>
-          <ul className="deliver" data-animate style={{ marginTop: "44px" }}>
+          <ul className="deliver u-mt-44" data-animate>
             <li>
               <span className="ck">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M20 6 9 17l-5-5" /></svg>

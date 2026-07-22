@@ -19,7 +19,7 @@ export default function NotFound() {
           <p className="lead">
             The page you were looking for isn&apos;t here. Let&apos;s get you back to something useful.
           </p>
-          <div className="btn-row" style={{ marginTop: 28 }}>
+          <div className="btn-row u-mt-28">
             <Link href="/" className="btn btn-primary btn-lg">
               Back to home <span className="arw">→</span>
             </Link>

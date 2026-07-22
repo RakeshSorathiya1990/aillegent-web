@@ -84,7 +84,7 @@ export default function EventikPage() {
             </h2>
             <p className="lead">Beyond galleries — Eventik runs the whole studio, from first inquiry to final payment.</p>
           </div>
-          <div className="grid g-3" style={{ marginTop: "56px" }}>
+          <div className="grid g-3 u-mt-56">
             <article className="card" data-animate>
               <div className="ico">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M12 3c.4 3.5 2.5 5.6 6 6-3.5.4-5.6 2.5-6 6-.4-3.5-2.5-5.6-6-6 3.5-.4 5.6-2.5 6-6z" /><circle cx="19" cy="17" r="3" /></svg>
@@ -139,7 +139,7 @@ export default function EventikPage() {
               <h2 className="h2 balance">
                 From the first inquiry to the <span className="grad-text">final delivered photo</span>
               </h2>
-              <p className="lead" style={{ marginTop: "18px" }}>
+              <p className="lead u-mt-18">
                 Eventik handles it all — clients, events, leads, storage, and revenue in one dashboard — so photographers
                 can focus on shooting, not admin.
               </p>
@@ -166,7 +166,7 @@ export default function EventikPage() {
               Every part of the studio, <span className="grad-text">already built</span>
             </h2>
           </div>
-          <div className="grid g-2" style={{ marginTop: "52px" }}>
+          <div className="grid g-2 u-mt-52">
             <figure className="shot-fig" data-animate>
               <Image
                 className="shot"

@@ -150,7 +150,7 @@ export default function QualityEngineeringPage() {
               A disciplined path that keeps business intent, testing, and automation connected the whole way to release.
             </p>
           </div>
-          <div className="process" data-animate style={{ marginTop: 48 }}>
+          <div className="process u-mt-48" data-animate>
             <div className="pstep">
               <div className="pn">01</div>
               <div className="pc">

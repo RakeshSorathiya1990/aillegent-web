@@ -71,7 +71,7 @@ export default function AdvertisingTechnologyIndustryPage() {
               outcomes easier to see and act on.
             </p>
           </div>
-          <div className="grid g-3" style={{ marginTop: "52px" }}>
+          <div className="grid g-3 u-mt-52">
             <article className="card" data-animate>
               <div className="ico">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="6" cy="6" r="3" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="12" r="3" /><path d="M9 6h5a2 2 0 0 1 2 2v1M9 18h5a2 2 0 0 0 2-2v-1" /></svg>
@@ -127,7 +127,7 @@ export default function AdvertisingTechnologyIndustryPage() {
             </article>
           </div>
 
-          <div className="note" data-animate style={{ marginTop: "34px" }}>
+          <div className="note u-mt-34" data-animate>
             <span className="ni">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4M12 8h.01" /></svg>
             </span>

@@ -141,7 +141,7 @@ export default function CostOptimisationPage() {
               Sustainable savings come from two directions at once — how the product is built, and what it takes to run.
             </p>
           </div>
-          <div className="grid g-2" style={{ marginTop: 52 }}>
+          <div className="grid g-2 u-mt-52">
             <article className="card" data-animate>
               <div className="ico">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
@@ -185,7 +185,7 @@ export default function CostOptimisationPage() {
               grows.
             </p>
           </div>
-          <div className="stat-band" data-animate style={{ marginTop: 48 }}>
+          <div className="stat-band u-mt-48" data-animate>
             <div className="stat">
               <div className="v" data-count="30" data-suffix="%">
                 0%

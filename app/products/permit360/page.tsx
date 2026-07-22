@@ -92,7 +92,7 @@ export default function Permit360Page() {
               <text className="v-title" x="90" y="230">Activate</text>
               <g transform="translate(334,204) scale(.85)"><circle className="v-ico" cx="12" cy="13" r="8" /><path className="v-ico" d="M12 9v4l3 2M12 2v3" /></g>
               <rect className="v-mint" x="196" y="204" width="120" height="24" rx="12" />
-              <text x="256" y="220" textAnchor="middle" style={{ fontFamily: "'IBM Plex Mono',monospace", fontSize: "9px", letterSpacing: ".1em", fill: "#fff" }}>VALID 08:00–18:00</text>
+              <text x="256" y="220" textAnchor="middle" fontFamily="'IBM Plex Mono',monospace" fontSize="9px" letterSpacing=".1em" fill="#fff">VALID 08:00–18:00</text>
 
               {/* 04 Work */}
               <circle className="v-mint" cx="40" cy="286" r="12" />
@@ -149,7 +149,7 @@ export default function Permit360Page() {
             </h2>
             <p className="lead">Five stages, one system — every step recorded, routed, and visible in real time.</p>
           </div>
-          <div className="grid g-3" style={{ marginTop: "56px" }}>
+          <div className="grid g-3 u-mt-56">
             <article className="card" data-animate>
               <span className="cn">01</span>
               <h3>Request</h3>
@@ -187,7 +187,7 @@ export default function Permit360Page() {
               Why teams <span className="grad-text">choose it</span>
             </h2>
           </div>
-          <ul className="deliver" data-animate style={{ marginTop: "44px" }}>
+          <ul className="deliver u-mt-44" data-animate>
             <li>
               <span className="ck">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M20 6 9 17l-5-5" /></svg>
@@ -231,7 +231,7 @@ export default function Permit360Page() {
             </h2>
             <p className="lead">Standard high-risk permit types out of the box — plus any custom type your team defines.</p>
           </div>
-          <div className="tags" data-animate style={{ marginTop: "40px" }}>
+          <div className="tags u-mt-40" data-animate>
             <span className="tag">Hot work</span>
             <span className="tag">Cold work</span>
             <span className="tag">Confined space entry</span>

@@ -124,7 +124,7 @@ export default function AppliedAIPage() {
               AI that connects to <span className="grad-text">data, product, and operations</span>
             </h2>
           </div>
-          <ul className="deliver" data-animate style={{ marginTop: 44 }}>
+          <ul className="deliver u-mt-44" data-animate>
             <li>
               <span className="ck">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
@@ -201,7 +201,7 @@ export default function AppliedAIPage() {
               Start with the decision, then <span className="grad-text">earn the capability</span>
             </h2>
           </div>
-          <div className="process" data-animate style={{ marginTop: 44 }}>
+          <div className="process u-mt-44" data-animate>
             <div className="pstep">
               <div className="pn">01</div>
               <div className="pc">

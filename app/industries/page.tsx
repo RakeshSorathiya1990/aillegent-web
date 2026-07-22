@@ -146,7 +146,7 @@ export default function IndustriesPage() {
                 Tell us about the operating model, the constraints, and the details that matter — we will meet you at
                 that level.
               </p>
-              <div className="btn-row" style={{ justifyContent: "center" }}>
+              <div className="btn-row u-jc-center">
                 <Link href="/contact" className="btn btn-primary btn-lg">
                   Discuss your domain <span className="arw">→</span>
                 </Link>

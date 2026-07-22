@@ -192,7 +192,7 @@ export default function ProductsPage() {
                 Request a walkthrough and we will show you the product on a real example — your use case, not a canned
                 demo.
               </p>
-              <div className="btn-row" style={{ justifyContent: "center" }}>
+              <div className="btn-row u-jc-center">
                 <Link href="/contact" className="btn btn-primary btn-lg">
                   Request a product walkthrough <span className="arw">→</span>
                 </Link>

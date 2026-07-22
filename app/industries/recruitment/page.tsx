@@ -70,7 +70,7 @@ export default function RecruitmentIndustryPage() {
               A single, connected flow that keeps the requirement, the review, and the match in one line of sight.
             </p>
           </div>
-          <div className="wf" data-animate style={{ marginTop: "52px" }}>
+          <div className="wf u-mt-52" data-animate>
             <div className="wf-node">Vendor</div>
             <span className="wf-arw">→</span>
             <div className="wf-node">Requirement</div>
@@ -88,13 +88,13 @@ export default function RecruitmentIndustryPage() {
               Tools shaped around <span className="grad-text">how hiring really moves</span>
             </h2>
           </div>
-          <div className="split" style={{ marginTop: "52px" }}>
+          <div className="split u-mt-52">
             <div data-animate>
               <p className="lead">
                 Build tools that capture the vendor requirement, structure it for review, and support an organised,
                 transparent candidate matching process.
               </p>
-              <ul className="deliver" data-animate style={{ marginTop: "26px" }}>
+              <ul className="deliver u-mt-26" data-animate>
                 <li>
                   <span className="ck">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M20 6 9 17l-5-5" /></svg>
@@ -131,7 +131,7 @@ export default function RecruitmentIndustryPage() {
                 {/* candidate list */}
                 <rect className="m-tile" x="218" y="56" width="150" height="156" rx="12" />
                 <text className="m-kick" x="240" y="78">CANDIDATES</text>
-                <line style={{ stroke: "#0E9E7640", strokeWidth: 1 }} x1="228" y1="86" x2="358" y2="86" />
+                <line stroke="#0E9E7640" strokeWidth={1} x1="228" y1="86" x2="358" y2="86" />
                 {/* candidate 1 */}
                 <g className="m-ico"><circle cx="244" cy="112" r="9" /><path d="M232 134c0-8 24-8 24 0" /></g>
                 <path className="m-line" d="M268 108h74M268 122h56" />

@@ -130,7 +130,7 @@ export default function ServicesPage() {
               quality, and operations.
             </p>
           </div>
-          <div className="cap-grid" style={{ marginTop: 56 }}>
+          <div className="cap-grid u-mt-56">
             <article className="card" data-animate>
               <div className="ico">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
@@ -242,15 +242,15 @@ export default function ServicesPage() {
         <div className="wrap">
           <div className="split">
             <div data-animate>
-              <h2 className="h2 balance" style={{ marginTop: 14 }}>
+              <h2 className="h2 balance u-mt-14">
                 Designed around your <span className="grad-text">business requirement</span>
               </h2>
-              <p className="lead" style={{ marginTop: 18 }}>
+              <p className="lead u-mt-18">
                 The right solution may be a focused monolith, a microservice platform, a domain-driven design, an
                 event-driven system, or a distributed-transaction architecture. We select the approach based on
                 operational needs, product maturity, team capability, and future scale — not trend alone.
               </p>
-              <div className="tags" style={{ marginTop: 26 }}>
+              <div className="tags u-mt-26">
                 <span className="tag">Monolith</span>
                 <span className="tag">Microservices</span>
                 <span className="tag">Domain-driven design</span>
@@ -271,16 +271,16 @@ export default function ServicesPage() {
                 <text x="80" y="138" textAnchor="middle" className="m-kick">
                   REQUIREMENT
                 </text>
-                <text x="80" y="158" textAnchor="middle" className="m-sub" style={{ fontSize: "8px" }}>
+                <text x="80" y="158" textAnchor="middle" className="m-sub" fontSize="8px">
                   needs · scale · team
                 </text>
                 {/* architecture options */}
                 <rect x="240" y="22" width="148" height="36" rx="10" className="m-panel" />
-                <text x="258" y="44" className="m-muted" style={{ fontFamily: "var(--font-mono)", fontSize: "10.5px" }}>
+                <text x="258" y="44" className="m-muted" fontFamily="'IBM Plex Mono',monospace" fontSize="10.5px">
                   Monolith
                 </text>
                 <rect x="240" y="68" width="148" height="36" rx="10" className="m-panel" />
-                <text x="258" y="90" className="m-muted" style={{ fontFamily: "var(--font-mono)", fontSize: "10.5px" }}>
+                <text x="258" y="90" className="m-muted" fontFamily="'IBM Plex Mono',monospace" fontSize="10.5px">
                   Microservices
                 </text>
                 {/* selected fit — highlighted */}
@@ -290,16 +290,18 @@ export default function ServicesPage() {
                   x="258"
                   y="136"
                   className="m-ink"
-                  style={{ fontFamily: "var(--font-mono)", fontSize: "10.5px", fontWeight: 600 }}
+                  fontFamily="'IBM Plex Mono',monospace"
+                  fontSize="10.5px"
+                  fontWeight={600}
                 >
                   Domain-driven
                 </text>
                 <rect x="240" y="160" width="148" height="36" rx="10" className="m-panel" />
-                <text x="258" y="182" className="m-muted" style={{ fontFamily: "var(--font-mono)", fontSize: "10.5px" }}>
+                <text x="258" y="182" className="m-muted" fontFamily="'IBM Plex Mono',monospace" fontSize="10.5px">
                   Event-driven
                 </text>
                 <rect x="240" y="206" width="148" height="36" rx="10" className="m-panel" />
-                <text x="258" y="228" className="m-muted" style={{ fontFamily: "var(--font-mono)", fontSize: "10.5px" }}>
+                <text x="258" y="228" className="m-muted" fontFamily="'IBM Plex Mono',monospace" fontSize="10.5px">
                   Distributed txn
                 </text>
                 {/* faint links to unselected */}
@@ -373,7 +375,7 @@ export default function ServicesPage() {
                 Not sure <span className="grad-text">where to start?</span>
               </h2>
               <p>One focused capability or the whole lifecycle — you don&apos;t need the full answer before reaching out.</p>
-              <div className="btn-row" style={{ justifyContent: "center" }}>
+              <div className="btn-row u-jc-center">
                 <Link href="/contact" className="btn btn-primary btn-lg">
                   Let&apos;s figure it out together <span className="arw">→</span>
                 </Link>
